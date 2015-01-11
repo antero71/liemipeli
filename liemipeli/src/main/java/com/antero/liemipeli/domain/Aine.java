@@ -9,6 +9,8 @@ package com.antero.liemipeli.domain;
  *
  * @author Antero Oikkonen
  */
-class Aine {
-    
+public class Aine {
+    private String nimi;
+    private int vahvuus;
+    private int hinta;
 }

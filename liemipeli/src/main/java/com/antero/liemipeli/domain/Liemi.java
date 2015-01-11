@@ -5,10 +5,17 @@
  */
 package com.antero.liemipeli.domain;
 
+import java.util.Collection;
+
 /**
+ * Liemillä on erilaisia ominaisuuksia, kuten esimerkiksi tietty liemi voidaan
+ * valmistaa vain jos on käyty tietty opintokurssi ja saatu se suoritettua
+ * tietyllä arvosanalla.
  *
  * @author Antero Oikkonen
  */
 public class Liemi {
-    
+
+    private Collection<Aine> aineet;
+    private Collection<Opinto> vaadittavatOpinnot;
 }

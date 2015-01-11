@@ -9,6 +9,9 @@ package com.antero.liemipeli.domain;
  *
  * @author Antero Oikkonen
  */
-class Opintosuoritus {
+public class Opintosuoritus {
+    private Opinto opinto;
+    private int arvosana;
+    private Opettaja opettaja;
     
 }

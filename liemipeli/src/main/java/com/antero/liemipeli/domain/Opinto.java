@@ -5,14 +5,11 @@
  */
 package com.antero.liemipeli.domain;
 
-import java.util.HashMap;
-
 /**
  *
  * @author Antero Oikkonen
  */
-public class Valmistusaineet {
-    private HashMap<String,Aine> aineet = new HashMap();
-    
-    
+public class Opinto {
+    private String kurssinNimi;
+    private int opintopisteet;
 }
