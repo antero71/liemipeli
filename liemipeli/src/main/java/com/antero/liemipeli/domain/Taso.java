@@ -10,5 +10,5 @@ package com.antero.liemipeli.domain;
  * @author Antero Oikkonen
  */
 public enum Taso {
-    
+    ALKEET,PERUSTEET,JATKO,SYVENTAVAT
 }
