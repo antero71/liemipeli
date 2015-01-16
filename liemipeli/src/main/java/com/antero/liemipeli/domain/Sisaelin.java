@@ -10,5 +10,16 @@ package com.antero.liemipeli.domain;
  * @author Antero Oikkonen
  */
 public class Sisaelin {
+    private String nimi;
+
+    public String getNimi() {
+        return nimi;
+    }
+
+    public void setNimi(String nimi) {
+        this.nimi = nimi;
+    }
+    
+    
     
 }

@@ -12,15 +12,15 @@ import java.util.Collection;
  *
  * @author Antero Oikkonen
  */
-public class Pelaaja extends ElavaOlio implements Opiskelija{
+public class Pelaaja extends ElavaOlio implements Opiskelija {
+
     private Collection<Opintosuoritus> opinnot;
     private Collection<Kurssitoteutus> meneillaanOlevatOpiskelut;
 
-
     public Pelaaja(String nimi) {
         super.setNimi(nimi);
-        opinnot=new ArrayList();
-        meneillaanOlevatOpiskelut=new ArrayList();
+        opinnot = new ArrayList();
+        meneillaanOlevatOpiskelut = new ArrayList();
     }
 
     public Collection<Kurssitoteutus> getMeneillaanOlevatOpiskelut() {
@@ -31,13 +31,11 @@ public class Pelaaja extends ElavaOlio implements Opiskelija{
         this.meneillaanOlevatOpiskelut = meneillaanOlevatOpiskelut;
     }
 
-    
-    
     public Collection<Opintosuoritus> getOpinnot() {
         return opinnot;
     }
-    
-    public void addOpinto(Opintosuoritus opinto){
+
+    public void addOpinto(Opintosuoritus opinto) {
         opinnot.add(opinto);
     }
 
@@ -52,7 +50,9 @@ public class Pelaaja extends ElavaOlio implements Opiskelija{
 
     @Override
     public void opiskele(Kurssitoteutus kurssitoteutus) {
-        meneillaanOlevatOpiskelut.add(kurssitoteutus);
+        if (!meneillaanOlevatOpiskelut.contains(kurssitoteutus)) {
+            meneillaanOlevatOpiskelut.add(kurssitoteutus);
+        }
     }
 
 }

@@ -5,6 +5,8 @@
  */
 package com.antero.liemipeli.domain;
 
+import java.util.Objects;
+
 /**
  *
  * @author Antero Oikkonen
@@ -38,6 +40,36 @@ public class Kurssi {
 
     public void setKurssinHinta(int kurssinHinta) {
         this.kurssinHinta = kurssinHinta;
+    }
+
+    @Override
+    public int hashCode() {
+        int hash = 7;
+        hash = 59 * hash + Objects.hashCode(this.kurssinNimi);
+        hash = 59 * hash + this.opintopisteet;
+        hash = 59 * hash + this.kurssinHinta;
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Kurssi other = (Kurssi) obj;
+        if (!Objects.equals(this.kurssinNimi, other.kurssinNimi)) {
+            return false;
+        }
+        if (this.opintopisteet != other.opintopisteet) {
+            return false;
+        }
+        if (this.kurssinHinta != other.kurssinHinta) {
+            return false;
+        }
+        return true;
     }
     
     
