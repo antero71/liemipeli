@@ -5,12 +5,14 @@
  */
 package com.antero.liemipeli.domain;
 
+import java.util.Collection;
+
 /**
  *
  * @author Antero Oikkonen
  */
-public class Opintosuoritus {
-    private Kurssitoteutus kurssiToteutus;
-    private int arvosana;
+public class Koulu {
+    private Collection<Opettaja> opettaja;
+    private Collection<Kurssitoteutus> kurssiToteutukset;
     
 }
