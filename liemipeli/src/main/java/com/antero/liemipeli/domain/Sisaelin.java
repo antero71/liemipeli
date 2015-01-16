@@ -9,6 +9,6 @@ package com.antero.liemipeli.domain;
  *
  * @author Antero Oikkonen
  */
-class Sisaelin {
+public class Sisaelin {
     
 }

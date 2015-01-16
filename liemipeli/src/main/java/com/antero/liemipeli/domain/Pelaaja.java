@@ -12,17 +12,15 @@ import java.util.Collection;
  *
  * @author Antero Oikkonen
  */
-public class Pelaaja {
+public class Pelaaja extends ElavaOlio{
     private Collection<Opintosuoritus> opinnot;
-    private String  nimi;
+
 
     public Pelaaja(String nimi) {
-        this.nimi = nimi;
+        super.setNimi(nimi);
         opinnot=new ArrayList();
     }
 
-    
-    
     public Collection<Opintosuoritus> getOpinnot() {
         return opinnot;
     }
@@ -35,13 +33,4 @@ public class Pelaaja {
         this.opinnot = opinnot;
     }
 
-    public String getNimi() {
-        return nimi;
-    }
-
-    public void setNimi(String nimi) {
-        this.nimi = nimi;
-    }
-    
-    
 }

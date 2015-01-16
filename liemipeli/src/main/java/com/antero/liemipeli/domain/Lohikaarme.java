@@ -9,6 +9,15 @@ package com.antero.liemipeli.domain;
  *
  * @author Antero Oikkonen
  */
-public class Lohikaarme {
-    
+public class Lohikaarme extends ElavaOlio{
+    private Sisaelin maksa;
+
+    public Sisaelin getMaksa() {
+        return maksa;
+    }
+
+    public void setMaksa(Sisaelin maksa) {
+        this.maksa = maksa;
+    }
+
 }

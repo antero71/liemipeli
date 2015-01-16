@@ -10,5 +10,26 @@ package com.antero.liemipeli.domain;
  * @author Antero Oikkonen
  */
 public class ElavaOlio {
+    private String nimi;
+    private boolean elava;
+
+    public String getNimi() {
+        return nimi;
+    }
+
+    public void setNimi(String nimi) {
+        this.nimi = nimi;
+    }
+
+    public boolean isElava() {
+        return elava;
+    }
+
+    public void setElava(boolean elava) {
+        this.elava = elava;
+    }
+    
+    
+    
     
 }

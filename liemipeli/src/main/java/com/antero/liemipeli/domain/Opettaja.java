@@ -11,12 +11,27 @@ import java.util.Collection;
  *
  * @author Antero Oikkonen
  */
-public class Opettaja {
+public class Opettaja extends ElavaOlio{
     //  opettaja voi olla pätevä opettamaan erilaisia opettavia aineita
     private Collection <Kurssi> opAineet;
-    private String nimi;
     private String oppiarvo;
-    
-    
+
+    public Collection<Kurssi> getOpAineet() {
+        return opAineet;
+    }
+
+    public void setOpAineet(Collection<Kurssi> opAineet) {
+        this.opAineet = opAineet;
+    }
+
+
+    public String getOppiarvo() {
+        return oppiarvo;
+    }
+
+    public void setOppiarvo(String oppiarvo) {
+        this.oppiarvo = oppiarvo;
+    }
+
     
 }
