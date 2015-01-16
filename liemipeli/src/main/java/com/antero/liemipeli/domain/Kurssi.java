@@ -13,7 +13,7 @@ public class Kurssi {
     private String kurssinNimi;
     private int opintopisteet;
     private int kurssinHinta;
-
+    
     
     
     public String getKurssinNimi() {
