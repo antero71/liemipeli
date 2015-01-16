@@ -10,6 +10,9 @@ Kursseja vetää opettaja joka on pätevä opettamaan ko. kurssia. Opettaja voi 
 kurssia. Kursseilla opetataan liemien tekemisen taitoja teoriassa ja käytönnössä. Liementekoloitsuja 
 opetellaan ahkerasti ja aina ei voida välttyä epäonnistumisilta ja pieniltä onnettomuuksilta.
 
+Eri opettajat voivat pystyä opettamaan samaa kurssia. Kurssin hinta riippuu opettajan taidoista ja kurssin
+pituudesta.
+
 Liemiä valmistetaan tietyistä valmistusaineista joita voi joko ostaa kauppapaikoilta tai 
 yksittäisiltä myyjiltä tai niitä voi löytää tai kerätä tietyistä paikoista, esim. metsästä, järvestä, 
 pellolta, niityiltä jne. Joitakin valmistusaineita voi taikoa ainetaikaloitsun avulla.
