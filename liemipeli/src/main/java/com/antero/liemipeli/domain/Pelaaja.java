@@ -5,6 +5,7 @@
  */
 package com.antero.liemipeli.domain;
 
+import java.util.ArrayList;
 import java.util.Collection;
 
 /**
@@ -15,6 +16,13 @@ public class Pelaaja {
     private Collection<Opintosuoritus> opinnot;
     private String  nimi;
 
+    public Pelaaja(String nimi) {
+        this.nimi = nimi;
+        opinnot=new ArrayList();
+    }
+
+    
+    
     public Collection<Opintosuoritus> getOpinnot() {
         return opinnot;
     }

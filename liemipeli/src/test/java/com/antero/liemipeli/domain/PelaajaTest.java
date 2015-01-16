@@ -15,31 +15,40 @@ import static org.junit.Assert.*;
  */
 public class PelaajaTest {
     
+    private Pelaaja pelaaja;
+    
     public PelaajaTest() {
     }
     
     @Before
     public void setUp() {
+        pelaaja = new Pelaaja("Liisa");
     }
 
     @Test
-    public void testGetOpinnot() {
+    public void testaaGetOpinnotJosEiOleOpintoja() {
+        assertTrue(pelaaja.getOpinnot().isEmpty());
     }
 
     @Test
-    public void testAddOpinto() {
+    public void testaaAddOpinto() {
+        Kurssi k = new Kurssi();
+        k.setKurssinNimi("Liemienteon peruskurssi I");
+        Opintosuoritus suoritus = new Opintosuoritus();
+        Kurssitoteutus toteutus = new Kurssitoteutus();
+        toteutus.setKurssi(k);
+        suoritus.setKurssiToteutus(toteutus);
+        suoritus.setArvosana(5);
+        pelaaja.addOpinto(suoritus);
+        assertTrue(pelaaja.getOpinnot().size()==1);
     }
 
-    @Test
-    public void testSetOpinnot() {
-    }
 
     @Test
-    public void testGetNimi() {
+    public void testaaGetJaSetNimi() {
+        pelaaja.setNimi("Antero");
+        assertEquals("Antero", pelaaja.getNimi());
     }
 
-    @Test
-    public void testSetNimi() {
-    }
     
 }

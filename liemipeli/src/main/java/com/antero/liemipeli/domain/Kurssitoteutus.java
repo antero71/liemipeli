@@ -12,4 +12,22 @@ package com.antero.liemipeli.domain;
 public class Kurssitoteutus {
     private Opettaja opettaja;
     private Kurssi kurssi;
+
+    public Opettaja getOpettaja() {
+        return opettaja;
+    }
+
+    public void setOpettaja(Opettaja opettaja) {
+        this.opettaja = opettaja;
+    }
+
+    public Kurssi getKurssi() {
+        return kurssi;
+    }
+
+    public void setKurssi(Kurssi kurssi) {
+        this.kurssi = kurssi;
+    }
+    
+    
 }
