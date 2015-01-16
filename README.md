@@ -16,3 +16,7 @@ pituudesta.
 Liemiä valmistetaan tietyistä valmistusaineista joita voi joko ostaa kauppapaikoilta tai 
 yksittäisiltä myyjiltä tai niitä voi löytää tai kerätä tietyistä paikoista, esim. metsästä, järvestä, 
 pellolta, niityiltä jne. Joitakin valmistusaineita voi taikoa ainetaikaloitsun avulla.
+
+Liemien valmistusaineita on mm. lohikäärmeen maksa, yksisarvisen veri, kuivatut rotanhännät, 
+taikasienimetsän myrkkykärpässienet, parantavat yrtit, parantavien yrittien juuret, ankeuttajan 
+viitanlieve, pippurin lehdet ja kukat. 
