@@ -10,7 +10,9 @@ package com.antero.liemipeli.domain;
  * @author Antero Oikkonen
  */
 public class Aine {
-    private String nimi;
+    private String nimi;  //esim. taikasieni
+    private String selostus; // esim. kasvaa taikametsässä puun juurella satunnaisesti
     private int vahvuus;
-    private int hinta;
+    private int hinta; // perushinta joka voi vaihdella riippuen
+    // hankintapaikasta (kauppa/kauppapuoti/tori)
 }
