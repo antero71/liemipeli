@@ -12,4 +12,5 @@ package com.antero.liemipeli.domain;
 public class Kurssi {
     private String kurssinNimi;
     private int opintopisteet;
+    private int kurssinHinta;
 }
