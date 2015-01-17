@@ -10,6 +10,7 @@ import com.antero.liemipeli.domain.opiskelu.Kurssitoteutus;
 import com.antero.liemipeli.domain.opiskelu.Opintosuoritus;
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Random;
 
 /**
  *
@@ -19,11 +20,13 @@ public class Pelaaja extends ElavaOlio implements Opiskelija {
 
     private Collection<Opintosuoritus> opinnot;
     private Collection<Kurssitoteutus> meneillaanOlevatOpiskelut;
+    private int rahat;
 
     public Pelaaja(String nimi) {
         super.setNimi(nimi);
         opinnot = new ArrayList();
         meneillaanOlevatOpiskelut = new ArrayList();
+        rahat = new Random().nextInt(10000);
     }
 
     public Collection<Kurssitoteutus> getMeneillaanOlevatOpiskelut() {
