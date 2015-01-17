@@ -5,6 +5,9 @@
  */
 package com.antero.liemipeli.domain;
 
+import com.antero.liemipeli.domain.opiskelu.Kurssi;
+import com.antero.liemipeli.domain.opiskelu.Kurssitoteutus;
+import com.antero.liemipeli.domain.opiskelu.Opintosuoritus;
 import org.junit.Before;
 import org.junit.Test;
 import static org.junit.Assert.*;

@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.antero.liemipeli.domain;
+package com.antero.liemipeli.domain.opiskelu;
 
 /**
  *
@@ -11,13 +11,11 @@ package com.antero.liemipeli.domain;
  */
 public class Harjoitus {
     private String kysymys;
-    private String vastaus;
+    private String vastaus="";
 
-    public String vastaa(String vastaus){
-        if(this.vastaus.equals(vastaus))
-            return "Oikea vastaus";
-        else
-            return "Väärä vastaus";
+    public boolean vastaa(String vastaus){
+        return this.vastaus.equals(vastaus);
+         
     }
     
     public String getKysymys() {

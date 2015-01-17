@@ -5,6 +5,7 @@
  */
 package com.antero.liemipeli.domain;
 
+import com.antero.liemipeli.domain.opiskelu.Kurssi;
 import java.util.Collection;
 
 /**

@@ -3,8 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.antero.liemipeli.domain;
+package com.antero.liemipeli.domain.opiskelu;
 
+import com.antero.liemipeli.domain.opiskelu.Kurssitoteutus;
 import java.util.Collection;
 
 /**

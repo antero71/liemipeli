@@ -5,6 +5,7 @@
  */
 package com.antero.liemipeli.domain;
 
+import com.antero.liemipeli.domain.opiskelu.Harjoitus;
 import org.junit.Before;
 import org.junit.Test;
 import static org.junit.Assert.*;

@@ -5,6 +5,9 @@
  */
 package com.antero.liemipeli.domain;
 
+import com.antero.liemipeli.domain.opiskelu.Opiskelija;
+import com.antero.liemipeli.domain.opiskelu.Kurssitoteutus;
+import com.antero.liemipeli.domain.opiskelu.Opintosuoritus;
 import java.util.ArrayList;
 import java.util.Collection;
 

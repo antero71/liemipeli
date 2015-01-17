@@ -3,8 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.antero.liemipeli.domain;
+package com.antero.liemipeli.domain.opiskelu;
 
+import java.util.Collection;
 import java.util.Objects;
 
 /**
@@ -15,9 +16,7 @@ public class Kurssi {
     private String kurssinNimi;
     private int opintopisteet;
     private int kurssinHinta;
-    
-    
-    
+
     public String getKurssinNimi() {
         return kurssinNimi;
     }
