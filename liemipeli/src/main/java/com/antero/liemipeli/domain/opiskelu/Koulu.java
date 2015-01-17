@@ -14,8 +14,9 @@ import java.util.Collection;
  * @author Antero Oikkonen
  */
 public class Koulu {
+
     private String nimi;
-    private Collection<Opettaja> opettaja;
+    private Collection<Opettaja> opettajat;
     private Collection<Kurssitoteutus> kurssiToteutukset;
     private int lukukausimaksu;
 
@@ -28,11 +29,11 @@ public class Koulu {
     }
 
     public Collection<Opettaja> getOpettaja() {
-        return opettaja;
+        return opettajat;
     }
 
     public void setOpettaja(Collection<Opettaja> opettaja) {
-        this.opettaja = opettaja;
+        this.opettajat = opettaja;
     }
 
     public Collection<Kurssitoteutus> getKurssiToteutukset() {
@@ -53,17 +54,19 @@ public class Koulu {
 
     /**
      * lisätään <code>Kurssitoteutus</code>
-     * @param ktot 
+     *
+     * @param ktot
      */
-    
     public void addKurssitoteutus(Kurssitoteutus ktot) {
-       if(this.kurssiToteutukset==null){
-           kurssiToteutukset = new ArrayList<Kurssitoteutus>();
-       }
-       kurssiToteutukset.add(ktot);
+        if (this.kurssiToteutukset == null) {
+            kurssiToteutukset = new ArrayList<Kurssitoteutus>();
+        }
+        kurssiToteutukset.add(ktot);
     }
-    
-    
-    
-    
+
+    @Override
+    public String toString() {
+        return nimi + "," + opettajat + ", lukukausimaksu " + lukukausimaksu;
+    }
+
 }

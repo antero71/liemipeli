@@ -43,5 +43,8 @@ public class Opettaja extends ElavaOlio{
         opAineet.add(kurssi);
     }
 
-    
+    @Override
+    public String toString() {
+        return getNimi()+", "+getOppiarvo()+","+getOpAineet();
+    }
 }

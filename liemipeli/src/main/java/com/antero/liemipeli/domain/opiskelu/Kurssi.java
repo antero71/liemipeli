@@ -70,6 +70,11 @@ public class Kurssi {
         }
         return true;
     }
+
+    @Override
+    public String toString() {
+        return getKurssinNimi()+", kurssinhinta "+getKurssinHinta()+", opintopisteet "+getOpintopisteet();
+    }
     
     
 }
