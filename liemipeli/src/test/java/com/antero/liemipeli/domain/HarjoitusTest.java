@@ -31,7 +31,7 @@ public class HarjoitusTest {
 
         harjoitus.setKysymys("Mitä on 2 * 2?");
         harjoitus.setOikeaVastaus("4");
-        assertEquals("Oikea vastaus", harjoitus.vastaa("4"));
+        assertTrue(harjoitus.vastaa("4"));
 
     }
 
@@ -39,7 +39,7 @@ public class HarjoitusTest {
     public void testaaVastaaVaaraVastaus() {
         harjoitus.setKysymys("Mitä on 2 * 2?");
         harjoitus.setOikeaVastaus("4");
-        assertEquals("Väärä vastaus", harjoitus.vastaa("5"));
+        assertFalse(harjoitus.vastaa("5"));
 
     }
 }

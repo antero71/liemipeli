@@ -7,6 +7,7 @@ package com.antero.liemipeli.domain.opiskelu;
 
 import com.antero.liemipeli.domain.ElavaOlio;
 import com.antero.liemipeli.domain.opiskelu.Kurssi;
+import java.util.ArrayList;
 import java.util.Collection;
 
 /**
@@ -33,6 +34,13 @@ public class Opettaja extends ElavaOlio{
 
     public void setOppiarvo(String oppiarvo) {
         this.oppiarvo = oppiarvo;
+    }
+
+    public void addKurssi(Kurssi kurssi) {
+        if(opAineet==null)
+            opAineet=new ArrayList<Kurssi>();
+        
+        opAineet.add(kurssi);
     }
 
     

@@ -29,6 +29,16 @@ public class Pelaaja extends ElavaOlio implements Opiskelija {
         rahat = new Random().nextInt(10000);
     }
 
+    public int getRahat() {
+        return rahat;
+    }
+
+    public void setRahat(int rahat) {
+        this.rahat = rahat;
+    }
+    
+    
+
     public Collection<Kurssitoteutus> getMeneillaanOlevatOpiskelut() {
         return meneillaanOlevatOpiskelut;
     }
