@@ -9,22 +9,12 @@ package com.antero.liemipeli.domain;
  *
  * @author Antero Oikkonen
  */
-public class Maksa implements Sisaelin {
-
-    private Taika taika;
-
-    public void setTaika(Taika taika) {
-        this.taika = taika;
-    }
+public class Norsu extends ElavaOlio implements Viisas{
 
     @Override
-    public String getNimi() {
-        return "maksa";
+    public String neuvo(String kysymys) {
+        
+        return "";
     }
-
-    @Override
-    public Taika getTaikavoima() {
-        return taika;
-    }
-
+    
 }

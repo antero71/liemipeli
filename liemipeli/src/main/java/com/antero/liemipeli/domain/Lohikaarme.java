@@ -13,8 +13,25 @@ public class Lohikaarme extends ElavaOlio {
 
     private Sisaelin maksa;
 
+    public Lohikaarme() {
+        maksa = new Maksa();
+    }
+
+    
+    
+    
+    /**
+     * jos lohikäärme on kuollut, palauttaa maksan (jos ei ole jo otettu),
+     * muuten null:in
+     */
     public Sisaelin getMaksa() {
-        return maksa;
+        if (!isElava()) {
+            Sisaelin s = maksa;
+            maksa = null;
+            return s;
+        } else {
+            return null;
+        }
     }
 
     public void setMaksa(Sisaelin maksa) {
@@ -22,19 +39,21 @@ public class Lohikaarme extends ElavaOlio {
     }
 
     /**
-     * jos on sopiva taika niin sisäelimen voi ottaa lohikääremeeltä taian 
-     * avalla ja se pysyy hengissä (sisäelin monistetaan). Kuolleelta voi myös ottaa
-     * sisäelimen, elävältä ei ilman oikeaa taikaa
+     * jos on sopiva taika niin sisäelimen voi ottaa lohikääremeeltä taian
+     * avalla ja se pysyy hengissä (sisäelin monistetaan). Kuolleelta voi myös
+     * ottaa sisäelimen, elävältä ei ilman oikeaa taikaa
+     *
      * @param taika
      * @param elin
-     * @return 
+     * @return
      */
-    
     public Sisaelin otaSisaelin(Taika taika, Sisaelin elin) {
         if (isElava() && taika != null && taika.taio()) {
             return new Maksa();
-        }else if(!isElava()){
-            return maksa;
+        } else if (!isElava()) {
+            if (elin instanceof Maksa) {
+                return getMaksa();
+            }
         }
         return null;
     }

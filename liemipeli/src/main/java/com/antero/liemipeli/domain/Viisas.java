@@ -9,8 +9,6 @@ package com.antero.liemipeli.domain;
  *
  * @author Antero Oikkonen
  */
-public interface Sisaelin {
-    public String getNimi();
-    public Taika getTaikavoima();
-
+public interface Viisas {
+    String neuvo(String kysymys);
 }

@@ -10,5 +10,5 @@ package com.antero.liemipeli.domain;
  * @author Antero Oikkonen
  */
 public interface Taikoja {
-    void taio();
+    boolean taio();
 }
