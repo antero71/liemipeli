@@ -40,7 +40,7 @@ public class Lohikaarme extends ElavaOlio {
 
     /**
      * jos on sopiva taika niin sisäelimen voi ottaa lohikääremeeltä taian
-     * avalla ja se pysyy hengissä (sisäelin monistetaan). Kuolleelta voi myös
+     * avulla ja se pysyy hengissä (sisäelin monistetaan). Kuolleelta voi myös
      * ottaa sisäelimen, elävältä ei ilman oikeaa taikaa
      *
      * @param taika
