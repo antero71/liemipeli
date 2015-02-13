@@ -5,6 +5,7 @@
  */
 package com.antero.liemipeli.domain;
 
+import com.antero.liemipeli.domain.taiat.LohikaarmeTaika;
 import com.antero.liemipeli.domain.test.DeterministicRandom;
 import org.junit.Before;
 import org.junit.Test;
@@ -15,13 +16,13 @@ import static org.junit.Assert.*;
  * @author Antero Oikkonen
  */
 public class LohikaarmeTest {
-    
+
     private Lohikaarme lohikaarme;
-    
+
     public LohikaarmeTest() {
         lohikaarme = new Lohikaarme();
     }
-    
+
     @Before
     public void setUp() {
     }
@@ -30,37 +31,36 @@ public class LohikaarmeTest {
     public void testGetMaksaJosLohikaarmeKuollut() {
         lohikaarme.setElava(false);
         Maksa m = new Maksa();
-        
+
         assertEquals(m, lohikaarme.getMaksa());
-        
+
     }
 
-    public void testaaGetMaksaJosLohikaarmeElaa(){
+    public void testaaGetMaksaJosLohikaarmeElaa() {
         lohikaarme.setElava(true);
         assertNull(lohikaarme.getMaksa());
     }
-    
-    public void testaaOtaSisaelinJosLohikaarmeElossaJaTaikaOk(){
-        
+
+    public void testaaOtaSisaelinJosLohikaarmeElossaJaTaikaOk() {
+
         DeterministicRandom r = new DeterministicRandom();
-        double [] luvut = {0.3};
+        double[] luvut = {0.3};
         r.setLuvut(luvut);
-        
+
         LohikaarmeTaika taika = new LohikaarmeTaika(r);
-        
+
         assertEquals(new Maksa(), lohikaarme.otaSisaelin(taika, new Maksa()));
     }
-    
-     public void testaaOtaSisaelinJosLohikaarmeElossaJaTaikaEiOk(){
-        
+
+    public void testaaOtaSisaelinJosLohikaarmeElossaJaTaikaEiOk() {
+
         DeterministicRandom r = new DeterministicRandom();
-        double [] luvut = {0.6};
+        double[] luvut = {0.6};
         r.setLuvut(luvut);
-        
+
         LohikaarmeTaika taika = new LohikaarmeTaika(r);
-        
+
         assertEquals(null, lohikaarme.otaSisaelin(taika, new Maksa()));
     }
-   
-    
+
 }

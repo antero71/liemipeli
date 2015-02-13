@@ -3,12 +3,18 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.antero.liemipeli.domain;
+package com.antero.liemipeli.domain.taiat;
 
 /**
  *
  * @author Antero Oikkonen
  */
-public interface Taikoja {
+public interface Taika {
+    /**
+     * palauttaa true jos taika onnistuu, muuten false
+     * @return 
+     */
     boolean taio();
+    String getSeloste();
+    String getNimi();
 }
