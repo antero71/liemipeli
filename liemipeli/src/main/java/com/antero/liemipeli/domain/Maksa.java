@@ -27,4 +27,24 @@ public class Maksa implements Sisaelin {
         return taika;
     }
 
+    @Override
+    public int hashCode() {
+        int hash = 7;
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Maksa other = (Maksa) obj;
+        return true;
+    }
+    
+    
+
 }
