@@ -4,4 +4,8 @@ Munia: munii 5-6 munaa kerrallaan
 
 Nimi:  Kilpivasaraloikäärme
 Väri:  Auringonkeltainen
-Munia: munii 4-7 munaa kerrallaan 
+Munia: munii 4-7 munaa kerrallaan
+
+Nimi:  Kilpikirveslohikäärme
+Väri:  Siniharmaa
+Munia: munii 3-6 munaa kerrallaan 
