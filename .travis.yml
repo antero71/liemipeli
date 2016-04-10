@@ -1,0 +1,2 @@
+language: java
+srcipt: mvn install; mvn test
