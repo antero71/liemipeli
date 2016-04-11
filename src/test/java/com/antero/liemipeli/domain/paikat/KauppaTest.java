@@ -45,7 +45,7 @@ public class KauppaTest {
         }
 
         assertEquals(10, t.getHinta());
-        assertEquals(vaihtorahat.intValue(), 90);
+        assertEquals(90,vaihtorahat.intValue());
         
     }
 
