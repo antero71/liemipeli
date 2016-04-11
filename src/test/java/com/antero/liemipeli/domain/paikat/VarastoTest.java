@@ -34,6 +34,11 @@ public class VarastoTest {
         Tuote t = varasto.haeTuote(nimi);
         assertTrue(t.getNimi().equals(nimi));
     }
+    
+    @Test
+    public void testHaeTuoteJotaeiole(){
+        assertNull(varasto.haeTuote("Musketti"));
+    }
 
     @Test
     public void testLisaaTuote() {
@@ -44,6 +49,16 @@ public class VarastoTest {
     @Test(expected = IllegalArgumentException.class)
     public void testAsetaVarastonKokoNegatiivinen() {
         varasto.asetaVarastonKoko(-10);
+    }
+    
+    @Test
+    public void testKokoaEivoiasettaaPienemmäksiKuinVarastosaldo(){
+        varasto.asetaVarastonKoko(10);
+        varasto.lisaaTuote(new TuoteImpl("sokeri", 10, null));
+        varasto.lisaaTuote(new TuoteImpl("vehnä", 2, null));
+        varasto.lisaaTuote(new TuoteImpl("maito", 10, null));
+        assertEquals(3, varasto.asetaVarastonKoko(2));
+        
     }
     
 }

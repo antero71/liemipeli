@@ -44,10 +44,13 @@ public class Varasto implements VarastoInterface {
     }
 
     @Override
-    public void asetaVarastonKoko(int koko) {
+    public int asetaVarastonKoko(int koko) {
         if(koko<0)
             throw new IllegalArgumentException("koko pitää olla positiivinen");
+        if(koko<tuotteet.size())
+            koko=tuotteet.size();
         this.koko = koko;
+        return koko;
     }
     
 }
