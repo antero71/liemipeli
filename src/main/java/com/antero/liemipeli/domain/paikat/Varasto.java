@@ -27,6 +27,7 @@ public class Varasto implements VarastoInterface {
     public Tuote haeTuote(String nimi) {
         for (Tuote t : tuotteet) {
             if (t.getNimi().equals(nimi)) {
+                tuotteet.remove(t);
                 return t;
             }
         }
