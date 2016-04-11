@@ -5,6 +5,7 @@
  */
 package com.antero.liemipeli.domain;
 
+import java.util.Objects;
 import java.util.Properties;
 
 /**
@@ -21,6 +22,36 @@ public class TuoteImpl implements Tuote{
         this.hinta = hinta;
         this.nimi = nimi;
         this.prop=prop;
+    }
+
+    @Override
+    public int hashCode() {
+        int hash = 7;
+        hash = 67 * hash + this.hinta;
+        hash = 67 * hash + Objects.hashCode(this.nimi);
+        hash = 67 * hash + Objects.hashCode(this.prop);
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final TuoteImpl other = (TuoteImpl) obj;
+        if (this.hinta != other.hinta) {
+            return false;
+        }
+        if (!Objects.equals(this.nimi, other.nimi)) {
+            return false;
+        }
+        if (!Objects.equals(this.prop, other.prop)) {
+            return false;
+        }
+        return true;
     }
     
     
