@@ -17,5 +17,6 @@ public interface VarastoInterface {
     boolean lisaaTuote(Tuote tuote);
     int asetaVarastonKoko(int koko);
     int laskeVarastonArvo();
+    int varastoSaldo();
     
 }

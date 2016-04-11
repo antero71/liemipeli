@@ -54,6 +54,9 @@ public class Varasto implements VarastoInterface {
         return koko;
     }
 
+    /**
+     * mikä on varaston arvo
+     */
     @Override
     public int laskeVarastonArvo() {
         int arvo = 0;
@@ -61,6 +64,15 @@ public class Varasto implements VarastoInterface {
             arvo += t.getHinta();
         }
         return arvo;
+    }
+
+    /**
+     * monta tuotetta on varastossa
+     * @return 
+     */
+    
+    public int varastoSaldo() {
+        return tuotteet.size();
     }
 
 }

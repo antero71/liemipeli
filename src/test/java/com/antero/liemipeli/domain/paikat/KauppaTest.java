@@ -53,5 +53,13 @@ public class KauppaTest {
     public void testLisaaVarastoon() {
         assertTrue(kauppa.lisaaVarastoon(new TuoteImpl("Vehnä", 10, null)));
     }
+    
+    @Test
+    public void testVarastosaldo(){
+        kauppa.lisaaVarastoon(new TuoteImpl("kivääri", 1000, null));
+        kauppa.lisaaVarastoon(new TuoteImpl("haarniska", 1200, null));
+        kauppa.lisaaVarastoon(new TuoteImpl("reppu", 100, null));
+        assertEquals(3, kauppa.montaTuotettaOnVarastossa());
+    }
 
 }

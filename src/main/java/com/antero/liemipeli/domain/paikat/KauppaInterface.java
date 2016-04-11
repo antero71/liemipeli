@@ -15,7 +15,7 @@ import java.util.HashMap;
 public interface KauppaInterface {
 
     boolean lisaaVarastoon(Tuote t);
-
+    int montaTuotettaOnVarastossa();
     HashMap<Tuote, Integer> osta(String nimi, int maksu);
     
 }

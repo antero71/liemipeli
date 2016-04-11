@@ -35,4 +35,10 @@ public class Kauppa implements KauppaInterface {
     public boolean lisaaVarastoon(Tuote t){
         return varasto.lisaaTuote(t);
     }
+
+    public int montaTuotettaOnVarastossa() {
+        return  varasto.varastoSaldo();
+    }
+
+   
 }
