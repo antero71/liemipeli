@@ -16,5 +16,6 @@ public interface VarastoInterface {
     Tuote haeTuote(String nimi);
     boolean lisaaTuote(Tuote tuote);
     int asetaVarastonKoko(int koko);
+    int laskeVarastonArvo();
     
 }

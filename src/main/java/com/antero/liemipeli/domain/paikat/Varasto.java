@@ -15,42 +15,51 @@ import java.util.Collection;
  * @author Antero Oikkonen
  */
 public class Varasto implements VarastoInterface {
-    
-    private Collection<Tuote>tuotteet=new ArrayList();
+
+    private Collection<Tuote> tuotteet = new ArrayList();
     private int koko;
 
     public Varasto(int koko) {
         this.koko = koko;
     }
-    
-    
-    
-    
+
     @Override
-    public Tuote haeTuote(String nimi){
-        for(Tuote t:tuotteet){
-            if(t.getNimi().equals(nimi)){
+    public Tuote haeTuote(String nimi) {
+        for (Tuote t : tuotteet) {
+            if (t.getNimi().equals(nimi)) {
                 return t;
             }
         }
-        return null; 
+        return null;
     }
 
     @Override
     public boolean lisaaTuote(Tuote tuote) {
-        if(tuotteet.size()==this.koko)
+        if (tuotteet.size() == this.koko) {
             return false;
+        }
         return tuotteet.add(tuote);
     }
 
     @Override
     public int asetaVarastonKoko(int koko) {
-        if(koko<0)
+        if (koko < 0) {
             throw new IllegalArgumentException("koko pitää olla positiivinen");
-        if(koko<tuotteet.size())
-            koko=tuotteet.size();
+        }
+        if (koko < tuotteet.size()) {
+            koko = tuotteet.size();
+        }
         this.koko = koko;
         return koko;
     }
-    
+
+    @Override
+    public int laskeVarastonArvo() {
+        int arvo = 0;
+        for (Tuote t : tuotteet) {
+            arvo += t.getHinta();
+        }
+        return arvo;
+    }
+
 }

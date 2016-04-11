@@ -61,4 +61,15 @@ public class VarastoTest {
         
     }
     
+    @Test
+    public void testVarastonArvo(){
+        varasto.asetaVarastonKoko(5);
+        varasto.lisaaTuote(new TuoteImpl("Vehna", 25, null));
+        varasto.lisaaTuote(new TuoteImpl("sokeri", 15, null));
+        varasto.lisaaTuote(new TuoteImpl("ruuti", 100, null));
+        
+        assertEquals(140, varasto.laskeVarastonArvo());
+        
+    }
+    
 }
