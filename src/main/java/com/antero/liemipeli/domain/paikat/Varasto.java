@@ -45,6 +45,8 @@ public class Varasto implements VarastoInterface {
 
     @Override
     public void asetaVarastonKoko(int koko) {
+        if(koko<0)
+            throw new IllegalArgumentException("koko pitää olla positiivinen");
         this.koko = koko;
     }
     

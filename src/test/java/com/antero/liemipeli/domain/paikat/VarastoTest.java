@@ -41,9 +41,9 @@ public class VarastoTest {
         assertFalse(varasto.lisaaTuote(new TuoteImpl("jäkälä",10,null)));
     }
 
-    @Test
-    public void testAsetaVarastonKoko() {
-        
+    @Test(expected = IllegalArgumentException.class)
+    public void testAsetaVarastonKokoNegatiivinen() {
+        varasto.asetaVarastonKoko(-10);
     }
     
 }
