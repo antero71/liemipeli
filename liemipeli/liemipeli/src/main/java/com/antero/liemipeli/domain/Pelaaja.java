@@ -18,9 +18,6 @@ import java.util.Random;
  */
 public class Pelaaja extends ElavaOlio implements Opiskelija {
 
-    // pelaaja saa valita itselleen nimen, iän ja muut ominaisuudet
-    
-    
     private Collection<Opintosuoritus> opinnot;
     private Collection<Kurssitoteutus> meneillaanOlevatOpiskelut;
     private int rahat;
