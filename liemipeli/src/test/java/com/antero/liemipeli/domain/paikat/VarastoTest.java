@@ -52,7 +52,7 @@ public class VarastoTest {
     }
 
     @Test
-    public void testKokoaEivoiasettaaPienemmäksiKuinVarastosaldo() {
+    public void testKokoaEivoiasettaaPienemmaksiKuinVarastosaldo() {
         varasto.asetaVarastonKoko(10);
         varasto.lisaaTuote(new TuoteImpl("sokeri", 10, null));
         varasto.lisaaTuote(new TuoteImpl("vehnä", 2, null));
@@ -81,6 +81,18 @@ public class VarastoTest {
         assertEquals("ruuti", varasto.haeTuote("ruuti").getNimi());
         assertEquals(40, varasto.laskeVarastonArvo());
 
+    }
+
+    @Test
+    public void testAsetaVarastonKoko() {
+    }
+
+    @Test
+    public void testLaskeVarastonArvo() {
+    }
+
+    @Test
+    public void testVarastoSaldo() {
     }
 
 }

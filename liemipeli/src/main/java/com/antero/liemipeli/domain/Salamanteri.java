@@ -9,6 +9,8 @@ package com.antero.liemipeli.domain;
  *
  * @author Antero Oikkonen
  */
-public class Salamanteri {
+public class Salamanteri extends ElavaOlio{
+    private String vari;
+    private Myrkky myrkky;
     
 }

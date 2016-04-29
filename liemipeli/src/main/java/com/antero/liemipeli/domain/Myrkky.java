@@ -9,6 +9,7 @@ package com.antero.liemipeli.domain;
  *
  * @author Antero Oikkonen
  */
-class Myrkky {
-    
+public class Myrkky {
+    private int vqhvuus;
+    private int vaikutus;
 }

@@ -10,6 +10,7 @@ package com.antero.liemipeli.domain;
  * @author Antero Oikkonen
  */
 public class Muna {
+    private int laji;
     private int vari;
     private int koko;
     private Myrkky myrkky;
