@@ -10,10 +10,22 @@
         <property name="kurssinHinta" value="4000"/>
     </bean>   
     
-      <bean id="liemikurssiperusteet2" class="com.antero.liemipeli.domain.opiskelu.Kurssi">
+    <bean id="liemikurssiperusteet2" class="com.antero.liemipeli.domain.opiskelu.Kurssi">
         <property name="kurssinNimi" value="Liementeon perusteet II"/>
         <property name="opintopisteet" value="6"/>
         <property name="kurssinHinta" value="9000"/>
-    </bean>  
+    </bean> 
+    
+     
+    <bean id="opettajaSysimetsa" class="com.antero.liemipeli.domain.opiskelu.Opettaja">
+        <property name="opAineet">
+            <list>
+                <ref bean="liemikurssiperusteet1" />
+                <ref bean="liemikurssiperusteet2" />
+            </list>
+        </property>   
+        <property name="oppiarvo" value="Tietäjä"/> 
+        <property name="nimi" value="Otto Sysimetsä"/>  
+    </bean> 
         
 </beans>

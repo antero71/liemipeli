@@ -9,6 +9,7 @@ import com.antero.liemipeli.domain.ElavaOlio;
 import com.antero.liemipeli.domain.opiskelu.Kurssi;
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.List;
 
 /**
  *
@@ -16,14 +17,14 @@ import java.util.Collection;
  */
 public class Opettaja extends ElavaOlio{
     //  opettaja voi olla pätevä opettamaan erilaisia opettavia aineita
-    private Collection <Kurssi> opAineet;
+    private List <Kurssi> opAineet;
     private String oppiarvo;
 
-    public Collection<Kurssi> getOpAineet() {
+    public List<Kurssi> getOpAineet() {
         return opAineet;
     }
 
-    public void setOpAineet(Collection<Kurssi> opAineet) {
+    public void setOpAineet(List<Kurssi> opAineet) {
         this.opAineet = opAineet;
     }
 
@@ -45,6 +46,6 @@ public class Opettaja extends ElavaOlio{
 
     @Override
     public String toString() {
-        return getNimi()+", "+getOppiarvo()+","+getOpAineet();
+        return getNimi()+", \n"+getOppiarvo()+",\n"+getOpAineet();
     }
 }

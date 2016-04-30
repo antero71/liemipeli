@@ -51,7 +51,7 @@ public class Liemipeli {
     }
 
     private Collection<Opettaja> alustaOpettajat() {
-        Opettaja o1 = luoOpettaja("Otto Sysimetsä", "Vanhempi tietäjä");
+        Opettaja o1 = luoOpettaja("opettajaSysimetsa");
 
         
         Kurssi k1 = luoKurssi("liemikurssiperusteet1");
@@ -80,6 +80,13 @@ public class Liemipeli {
                 "spring-context.xml");
         return (Kurssi) beanfactory.getBean(nimi);
     }
+    
+     private Opettaja luoOpettaja(String nimi) {
+        BeanFactory beanfactory = new ClassPathXmlApplicationContext(
+                "spring-context.xml");
+        return (Opettaja) beanfactory.getBean(nimi);
+    }
+    
 
     public void listaaKoulut() {
         for (Koulu k : koulut) {
