@@ -43,7 +43,7 @@ package com.antero.liemipeli.domain;
 //
 // Class to calculate information about the phases of the moon.
 
-public class MoonCalculation {
+public class MoonCalculation implements MoonCalcInterface {
 
     // day_year - gives the day of the year for the first day of each
     // month -1. i.e. 1st January is the 0th day of the year, 1st
@@ -111,6 +111,7 @@ public class MoonCalculation {
     // int     month    Jan = 1 
     // int     day      1 = 1
 
+    @Override
     public int  moonPhase(int year, int month, int day) {
             
         int             phase;          // Moon phase
@@ -175,7 +176,8 @@ public class MoonCalculation {
     //
     // Return the name of a given phase
     
-    String  phaseName(int phase) {
+    @Override
+    public String phaseName(int phase) {
         return moon_phase_name[phase];
     }
 }

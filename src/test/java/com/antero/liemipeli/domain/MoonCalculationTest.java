@@ -56,14 +56,14 @@ public class MoonCalculationTest {
         assertEquals("First quarter", calc.phaseName(vaihe));
 
     }
-    
+
     @Test
-    public void testViimeinenNeljannes(){
+    public void testViimeinenNeljannes() {
         int vaihe = calc.moonPhase(2016, 5, 29);
         assertEquals("Third quarter", calc.phaseName(vaihe));
         vaihe = calc.moonPhase(2018, 3, 9);
         assertEquals("Third quarter", calc.phaseName(vaihe));
-        
+
         vaihe = calc.moonPhase(2020, 8, 11);
         assertEquals("Third quarter", calc.phaseName(vaihe));
 
@@ -73,6 +73,11 @@ public class MoonCalculationTest {
     public void testNewMoon() {
         int vaihe = calc.moonPhase(2016, 4, 7);
         assertEquals("New", calc.phaseName(vaihe));
+
+        vaihe = calc.moonPhase(2019, 8, 30);
+
+        assertEquals("New", calc.phaseName(vaihe));
+
     }
 
     @Test
