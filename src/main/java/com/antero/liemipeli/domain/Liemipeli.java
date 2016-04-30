@@ -11,6 +11,8 @@ import com.antero.liemipeli.domain.opiskelu.Kurssitoteutus;
 import com.antero.liemipeli.domain.opiskelu.Opettaja;
 import java.util.ArrayList;
 import java.util.Collection;
+import org.springframework.beans.factory.BeanFactory;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 /**
  *
@@ -51,7 +53,10 @@ public class Liemipeli {
     private Collection<Opettaja> alustaOpettajat() {
         Opettaja o1 = luoOpettaja("Otto Sysimetsä", "Vanhempi tietäjä");
 
-        Kurssi k1 = luoKurssi("Liementeon perusteet I", 10, 1000);
+        BeanFactory beanfactory = new ClassPathXmlApplicationContext(
+                "spring-context.xml");
+        Kurssi k1 = (Kurssi) beanfactory.getBean("liemikurssiperusteet");
+        //luoKurssi("Liementeon perusteet I", 10, 1000);
 
         o1.addKurssi(k1);
 
@@ -78,7 +83,7 @@ public class Liemipeli {
     }
 
     public void listaaKoulut() {
-        for(Koulu k:koulut){
+        for (Koulu k : koulut) {
             System.out.println(k);
         }
     }
