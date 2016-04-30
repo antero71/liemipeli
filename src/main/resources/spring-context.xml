@@ -4,10 +4,16 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans 
        http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">        
 
-    <bean id="liemikurssiperusteet" class="com.antero.liemipeli.domain.opiskelu.Kurssi">
-        <property name="kurssinNimi" value="Liementeon perusteet"/>
+    <bean id="liemikurssiperusteet1" class="com.antero.liemipeli.domain.opiskelu.Kurssi">
+        <property name="kurssinNimi" value="Liementeon perusteet I"/>
         <property name="opintopisteet" value="5"/>
         <property name="kurssinHinta" value="4000"/>
     </bean>   
+    
+      <bean id="liemikurssiperusteet2" class="com.antero.liemipeli.domain.opiskelu.Kurssi">
+        <property name="kurssinNimi" value="Liementeon perusteet II"/>
+        <property name="opintopisteet" value="6"/>
+        <property name="kurssinHinta" value="9000"/>
+    </bean>  
         
 </beans>
