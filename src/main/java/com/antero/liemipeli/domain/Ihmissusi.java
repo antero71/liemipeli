@@ -12,7 +12,7 @@ import java.util.Calendar;
  * @author Antero Oikkonen
  */
 public class Ihmissusi extends ElavaOlio{
-    // täydenkuun aikaan muuttuu hirmuolioksi
+    // täydenkuun aikaan muuttuu hirviöksi
     
     private String fullMoon = "Full";
     private MoonCalcInterface moonCalc;

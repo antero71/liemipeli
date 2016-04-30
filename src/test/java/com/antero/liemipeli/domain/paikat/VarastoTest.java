@@ -41,7 +41,7 @@ public class VarastoTest {
     }
 
     @Test
-    public void testLisaaTuote() {
+    public void testLisaaTuoteTayteenVarastoon() {
         assertTrue(varasto.lisaaTuote(new TuoteImpl("yritti", 10, null)));
         assertFalse(varasto.lisaaTuote(new TuoteImpl("jäkälä", 10, null)));
     }
@@ -78,9 +78,36 @@ public class VarastoTest {
         varasto.lisaaTuote(new TuoteImpl("Vehna", 25, null));
         varasto.lisaaTuote(new TuoteImpl("sokeri", 15, null));
         varasto.lisaaTuote(new TuoteImpl("ruuti", 100, null));
-        assertEquals("ruuti", varasto.haeTuote("ruuti").getNimi());
+        Tuote t = varasto.haeTuote("ruuti");
+        assertEquals("ruuti", t.getNimi());
         assertEquals(40, varasto.laskeVarastonArvo());
+        assertEquals(100, t.getHinta());
 
+    }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void testAsetaVarastonKokoNegatiiviseksi() {
+        varasto.asetaVarastonKoko(-10);
+    }
+
+    @Test
+    public void asetaVarastonKoko100() {
+        assertEquals(100, varasto.asetaVarastonKoko(100));
+    }
+
+    @Test
+    public void testVarastoSaldo() {
+        varasto.asetaVarastonKoko(10);
+
+        varasto.lisaaTuote(new TuoteImpl("miekka", 1000, null));
+        varasto.lisaaTuote(new TuoteImpl("haarniska", 2000, null));
+        varasto.lisaaTuote(new TuoteImpl("kypärä", 1000, null));
+
+        assertEquals(3, varasto.varastoSaldo());
+
+        Tuote t = varasto.haeTuote("miekka");
+
+        assertEquals(2, varasto.varastoSaldo());
     }
 
 }
