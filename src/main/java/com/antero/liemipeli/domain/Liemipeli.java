@@ -11,6 +11,7 @@ import com.antero.liemipeli.domain.opiskelu.Kurssitoteutus;
 import com.antero.liemipeli.domain.opiskelu.Opettaja;
 import java.util.ArrayList;
 import java.util.Collection;
+import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.BeanFactory;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -20,6 +21,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
  */
 public class Liemipeli {
 
+    BeanFactory beanfactory;
     private Collection<Koulu> koulut;
 
     public void valitseKoulu() {
@@ -43,7 +45,7 @@ public class Liemipeli {
         }
 
         if (koulut == null) {
-            koulut = new ArrayList<Koulu>();
+            koulut = new ArrayList();
         }
 
         koulut.add(k1);
@@ -53,34 +55,26 @@ public class Liemipeli {
     private Collection<Opettaja> alustaOpettajat() {
         Opettaja o1 = luoOpettaja("opettajaSysimetsa");
         Opettaja o2 = luoOpettaja("opettajaTaikanen");
-        
-        Collection<Opettaja> opettajat = new ArrayList<Opettaja>();
+
+        Collection<Opettaja> opettajat = new ArrayList<>();
         opettajat.add(o1);
         opettajat.add(o2);
 
         return opettajat;
     }
-
-    private Opettaja luoOpettaja(String nimi, String oppiarvo) {
-        Opettaja o1 = new Opettaja();
-        o1.setElava(true);
-        o1.setNimi(nimi);
-        o1.setOppiarvo(oppiarvo);
-        return o1;
-    }
-
-    private Kurssi luoKurssi(String nimi) {
-        BeanFactory beanfactory = new ClassPathXmlApplicationContext(
-                "spring-context.xml");
-        return (Kurssi) beanfactory.getBean(nimi);
-    }
     
-     private Opettaja luoOpettaja(String nimi) {
-        BeanFactory beanfactory = new ClassPathXmlApplicationContext(
-                "spring-context.xml");
+    private Opettaja luoOpettaja(String nimi) {
+        BeanFactory beanfactory = getBeanFactory();
         return (Opettaja) beanfactory.getBean(nimi);
     }
-    
+
+    private BeanFactory getBeanFactory() throws BeansException {
+        if (beanfactory == null) {
+            beanfactory = new ClassPathXmlApplicationContext(
+                    "spring-context.xml");
+        }
+        return beanfactory;
+    }
 
     public void listaaKoulut() {
         for (Koulu k : koulut) {
