@@ -46,6 +46,6 @@ public class Opettaja extends ElavaOlio{
 
     @Override
     public String toString() {
-        return getNimi()+", \n"+getOppiarvo()+",\n"+getOpAineet();
+        return "\nOpettajan nimi: "+getNimi()+"\nOppiarvo: "+getOppiarvo()+"\nOppiaineet: "+getOpAineet();
     }
 }

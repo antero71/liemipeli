@@ -73,7 +73,7 @@ public class Kurssi {
 
     @Override
     public String toString() {
-        return getKurssinNimi()+", kurssinhinta "+getKurssinHinta()+", opintopisteet "+getOpintopisteet();
+        return "\nKurssin nimi: "+getKurssinNimi()+"\nkurssin hinta: "+getKurssinHinta()+"\nopintopisteet "+getOpintopisteet();
     }
     
     

@@ -16,6 +16,19 @@
         <property name="kurssinHinta" value="9000"/>
     </bean> 
     
+    
+    <bean id="taikojenPerusteet1" class="com.antero.liemipeli.domain.opiskelu.Kurssi">
+        <property name="kurssinNimi" value="Taikojen perusteet I"/>
+        <property name="opintopisteet" value="4"/>
+        <property name="kurssinHinta" value="3000"/>
+    </bean>   
+    
+    <bean id="taikojenPerusteet2" class="com.antero.liemipeli.domain.opiskelu.Kurssi">
+        <property name="kurssinNimi" value="Taikojen perusteet II"/>
+        <property name="opintopisteet" value="7"/>
+        <property name="kurssinHinta" value="7500"/>
+    </bean> 
+    
      
     <bean id="opettajaSysimetsa" class="com.antero.liemipeli.domain.opiskelu.Opettaja">
         <property name="opAineet">
@@ -26,6 +39,17 @@
         </property>   
         <property name="oppiarvo" value="Tietäjä"/> 
         <property name="nimi" value="Otto Sysimetsä"/>  
+    </bean> 
+    
+      <bean id="opettajaTaikanen" class="com.antero.liemipeli.domain.opiskelu.Opettaja">
+        <property name="opAineet">
+            <list>
+                <ref bean="taikojenPerusteet1" />
+                <ref bean="taikojenPerusteet2" />
+            </list>
+        </property>   
+        <property name="oppiarvo" value="Vanhempi taikoja"/> 
+        <property name="nimi" value="Liisa Taikanen"/>  
     </bean> 
         
 </beans>

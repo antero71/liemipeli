@@ -52,17 +52,11 @@ public class Liemipeli {
 
     private Collection<Opettaja> alustaOpettajat() {
         Opettaja o1 = luoOpettaja("opettajaSysimetsa");
-
+        Opettaja o2 = luoOpettaja("opettajaTaikanen");
         
-        Kurssi k1 = luoKurssi("liemikurssiperusteet1");
-        Kurssi k2 = luoKurssi("liemikurssiperusteet2");
-        //luoKurssi("Liementeon perusteet I", 10, 1000);
-
-        o1.addKurssi(k1);
-        o1.addKurssi(k2);
-
         Collection<Opettaja> opettajat = new ArrayList<Opettaja>();
         opettajat.add(o1);
+        opettajat.add(o2);
 
         return opettajat;
     }
