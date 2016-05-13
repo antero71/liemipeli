@@ -64,7 +64,7 @@ public class Liemipeli {
     }
     
     private Opettaja luoOpettaja(String nimi) {
-        BeanFactory beanfactory = getBeanFactory();
+        getBeanFactory();
         return (Opettaja) beanfactory.getBean(nimi);
     }
 
