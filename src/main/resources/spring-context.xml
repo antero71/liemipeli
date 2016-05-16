@@ -4,6 +4,14 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans 
        http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">        
 
+    
+    <bean id="johdatusVelhouteen" class="com.antero.liemipeli.domain.opiskelu.Kurssi">
+        <property name="kurssinNimi" value="Johdatus velhouteen"/>
+        <property name="opintopisteet" value="3"/>
+        <property name="kurssinHinta" value="2000"/>
+    </bean> 
+    
+    
     <bean id="liemikurssiperusteet1" class="com.antero.liemipeli.domain.opiskelu.Kurssi">
         <property name="kurssinNimi" value="Liementeon perusteet I"/>
         <property name="opintopisteet" value="5"/>
@@ -41,7 +49,7 @@
         <property name="nimi" value="Otto Sysimetsä"/>  
     </bean> 
     
-      <bean id="opettajaTaikanen" class="com.antero.liemipeli.domain.opiskelu.Opettaja">
+    <bean id="opettajaTaikanen" class="com.antero.liemipeli.domain.opiskelu.Opettaja">
         <property name="opAineet">
             <list>
                 <ref bean="taikojenPerusteet1" />
