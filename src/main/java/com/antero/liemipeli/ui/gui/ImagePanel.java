@@ -54,6 +54,7 @@ public class ImagePanel extends javax.swing.JPanel {
             TextField t = new TextField();
             t.setText("Virhe tiedoston lukemisessa");
             this.add(t);
+            ex.printStackTrace();
         }
         initComponents();
     }

@@ -20,6 +20,16 @@ public class Kurssitoteutus {
     private int kurssinEteneminen;
     private Collection<Harjoitus> harjoitukset;
 
+    
+    public boolean isSuoritettu(){
+        return kurssinEteneminen >= kurssinKokonaisPisteet;
+    }
+    
+    public int montaPistettaPuuttuu(){
+        System.out.println("kurssinKokonaisPisteet "+kurssinKokonaisPisteet+":kurssinEteneminen "+kurssinEteneminen);
+        return kurssinKokonaisPisteet-kurssinEteneminen;
+    }
+    
     public Collection<Harjoitus> getHarjoitukset() {
         return harjoitukset;
     }
@@ -27,8 +37,6 @@ public class Kurssitoteutus {
     public void setHarjoitukset(Collection<Harjoitus> harjoitukset) {
         this.harjoitukset = harjoitukset;
     }
-    
-    
 
     public int getKurssinKokonaisPisteet() {
         return kurssinKokonaisPisteet;
@@ -44,6 +52,19 @@ public class Kurssitoteutus {
 
     public void setKurssinEteneminen(int kurssinEteneminen) {
         this.kurssinEteneminen = kurssinEteneminen;
+    }
+
+    public void opiskele() {
+        System.out.println("opiskele,kurssinKokonaisPisteet "+kurssinKokonaisPisteet+":kurssinEteneminen "+kurssinEteneminen);
+        
+        if (kurssinEteneminen <= kurssinKokonaisPisteet) {
+            if((kurssinEteneminen + 10) < kurssinKokonaisPisteet){
+               this.kurssinEteneminen += 10; 
+            }else{
+               this.kurssinEteneminen = this.kurssinKokonaisPisteet;
+            }    
+        }
+        System.out.println("kurssinEteneminen "+kurssinEteneminen);
     }
 
     public Opettaja getOpettaja() {

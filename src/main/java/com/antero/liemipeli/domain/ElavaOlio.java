@@ -12,6 +12,9 @@ package com.antero.liemipeli.domain;
 public class ElavaOlio {
     private String nimi;
     private boolean elava;
+    private float pituus;
+    private float paino;
+    
   
 
     public String getNimi() {

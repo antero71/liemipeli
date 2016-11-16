@@ -23,7 +23,7 @@ public class HarjoitusTest {
 
     @Before
     public void setUp() {
-        harjoitus = new Harjoitus();
+        harjoitus = new Harjoitus("Kuka keksi suhteellisuusteorian","Einstain");
     }
 
     @Test
