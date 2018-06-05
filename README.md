@@ -1,3 +1,5 @@
+[![Known Vulnerabilities](https://snyk.io/test/github/antero71/liemipeli/badge.svg?targetFile=pom.xml)](https://snyk.io/test/github/antero71/liemipeli?targetFile=pom.xml)
+
 Liemipeli 
 
 Peli jossa valmistetaan erilaisia taikajuomia ja liemiä.
