@@ -11,7 +11,8 @@ yhtä tehokasta lientä aikaiseksi kuin jos olisi vaadittavat opinnot suoritettu
 Kouluja on useita ja niiden lukukausimaksut vaihtelevat ja opettajien taidot vaihtelevat myös.
 Kouluissa on opettajia ja erilaisia kurssitoteutuksia. Kurssitoteutus koostuu kurssista, opettajasta ja 
 harjoituksista. Kurssin vetäjä on opettaja joka on pätevä opettamaan ko. kurssia. Opettaja voi opettaa 
-yhtä tai useampaa kurssia. Kursseilla opetataan liemien tekemisen taitoja teoriassa ja käytönnössä. Liementekoloitsuja opetellaan ahkerasti ja aina ei voida välttyä epäonnistumisilta ja pieniltä 
+yhtä tai useampaa kurssia. Kursseilla opetataan liemien tekemisen taitoja teoriassa ja käytönnössä.
+Liementekoloitsuja opetellaan ahkerasti ja aina ei voida välttyä epäonnistumisilta ja pieniltä
 onnettomuuksilta.
 
 Eri opettajat voivat pystyä opettamaan samaa kurssia. Kurssin hinta riippuu opettajan taidoista ja 

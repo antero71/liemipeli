@@ -43,6 +43,7 @@ public class KurssitoteutusTest {
         assertEquals(expResult, result);
         assertEquals(1, result.size());
         assertEquals("5", ((Harjoitus) (result.iterator().next())).getVastaus());
+      
 
         //fail("The test case is a prototype.");
     }

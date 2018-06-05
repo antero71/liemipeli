@@ -7,7 +7,12 @@ package com.antero.liemipeli.ui.gui;
 
 import java.awt.Container;
 import java.awt.Graphics;
+import java.awt.Point;
 import java.awt.TextField;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
@@ -18,7 +23,10 @@ import javax.swing.BoxLayout;
  *
  * @author Antero Oikkonen
  */
-public class ImagePanel extends javax.swing.JPanel {
+public class ImagePanel extends javax.swing.JPanel implements KeyListener,MouseListener {
+
+    int kuvan_x = 0;
+    int kuvan_y = 0;
 
     public static void setComponentToPane(Container pane) {
         pane.setLayout(new BoxLayout(pane, BoxLayout.Y_AXIS));
@@ -48,8 +56,8 @@ public class ImagePanel extends javax.swing.JPanel {
     public ImagePanel() {
         try {
             image = ImageIO.read(new File("./kuvat/pelaaja.png"));
-            h=image.getHeight();
-            w=image.getWidth();
+            h = image.getHeight();
+            w = image.getWidth();
         } catch (IOException ex) {
             TextField t = new TextField();
             t.setText("Virhe tiedoston lukemisessa");
@@ -81,14 +89,62 @@ public class ImagePanel extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
 
-    
     // Variables declaration - do not modify//GEN-BEGIN:variables
     // End of variables declaration//GEN-END:variables
-
     @Override
     protected void paintComponent(Graphics g) {
-        super.paintComponent(g); 
-        
-        g.drawImage(image, 100, 100, this);//To change body of generated methods, choose Tools | Templates.
+        super.paintComponent(g);
+
+        g.drawImage(image, kuvan_x, kuvan_y, this);//To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void keyTyped(KeyEvent e) {
+        if (e.getKeyCode() == KeyEvent.VK_LEFT) {
+            kuvan_x -= 10;
+        }
+        if (e.getKeyCode() == KeyEvent.VK_RIGHT) {
+            kuvan_x += 10;
+        }
+        super.repaint();
+    }
+
+    @Override
+    public void keyPressed(KeyEvent e) {
+
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void keyReleased(KeyEvent e) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void mouseClicked(MouseEvent e) {
+        Point p = e.getLocationOnScreen();
+        kuvan_x = p.x;
+        kuvan_y = p.y;
+        super.repaint();
+    }
+
+    @Override
+    public void mousePressed(MouseEvent e) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void mouseReleased(MouseEvent e) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void mouseEntered(MouseEvent e) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void mouseExited(MouseEvent e) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }

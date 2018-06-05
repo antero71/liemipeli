@@ -1,1 +1,6 @@
 target/
+nbactions.xml
+.idea
+.gradle
+main.iml
+test.iml

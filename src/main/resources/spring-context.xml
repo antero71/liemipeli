@@ -5,40 +5,40 @@
        http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">        
 
     
-    <bean id="johdatusVelhouteen" class="com.antero.liemipeli.domain.opiskelu.Kurssi">
+    <bean id="johdatusVelhouteen" class="Kurssi">
         <property name="kurssinNimi" value="Johdatus velhouteen"/>
         <property name="opintopisteet" value="3"/>
         <property name="kurssinHinta" value="2000"/>
     </bean> 
     
     
-    <bean id="liemikurssiperusteet1" class="com.antero.liemipeli.domain.opiskelu.Kurssi">
+    <bean id="liemikurssiperusteet1" class="Kurssi">
         <property name="kurssinNimi" value="Liementeon perusteet I"/>
         <property name="opintopisteet" value="5"/>
         <property name="kurssinHinta" value="4000"/>
     </bean>   
     
-    <bean id="liemikurssiperusteet2" class="com.antero.liemipeli.domain.opiskelu.Kurssi">
+    <bean id="liemikurssiperusteet2" class="Kurssi">
         <property name="kurssinNimi" value="Liementeon perusteet II"/>
         <property name="opintopisteet" value="6"/>
         <property name="kurssinHinta" value="9000"/>
     </bean> 
     
     
-    <bean id="taikojenPerusteet1" class="com.antero.liemipeli.domain.opiskelu.Kurssi">
+    <bean id="taikojenPerusteet1" class="Kurssi">
         <property name="kurssinNimi" value="Taikojen perusteet I"/>
         <property name="opintopisteet" value="4"/>
         <property name="kurssinHinta" value="3000"/>
     </bean>   
     
-    <bean id="taikojenPerusteet2" class="com.antero.liemipeli.domain.opiskelu.Kurssi">
+    <bean id="taikojenPerusteet2" class="Kurssi">
         <property name="kurssinNimi" value="Taikojen perusteet II"/>
         <property name="opintopisteet" value="7"/>
         <property name="kurssinHinta" value="7500"/>
     </bean> 
     
      
-    <bean id="opettajaSysimetsa" class="com.antero.liemipeli.domain.opiskelu.Opettaja">
+    <bean id="opettajaSysimetsa" class="Opettaja">
         <property name="opAineet">
             <list>
                 <ref bean="liemikurssiperusteet1" />
@@ -49,7 +49,7 @@
         <property name="nimi" value="Otto Sysimetsä"/>  
     </bean> 
     
-    <bean id="opettajaTaikanen" class="com.antero.liemipeli.domain.opiskelu.Opettaja">
+    <bean id="opettajaTaikanen" class="Opettaja">
         <property name="opAineet">
             <list>
                 <ref bean="taikojenPerusteet1" />
