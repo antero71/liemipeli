@@ -1,25 +1,26 @@
-apply plugin: 'java'
-apply plugin: 'maven'
-
-group = 'com.antero'
-version = '1.0-SNAPSHOT'
-
-description = """"""
-
-sourceCompatibility = 1.7
-targetCompatibility = 1.7
-tasks.withType(JavaCompile) {
-	options.encoding = 'UTF-8'
+allprojects {
+    repositories{
+        jcenter()
+        mavenCentral()
+    }
 }
 
 
 
-repositories {
-        
-     maven { url "http://repo.maven.apache.org/maven2" }
+subprojects {
+    project(':liemipeli-test'){
+        dependencies{
+            project(':liemipeli-kotlin')
+        }
+    }
 }
-dependencies {
-    compile group: 'org.springframework', name: 'spring-context', version:'4.0.7.RELEASE'
-    testCompile group: 'junit', name: 'junit', version:'4.10'
-    testCompile group: 'org.mockito', name: 'mockito-all', version:'1.9.0'
+
+task iterateDeclaredDependencies {
+    doLast {
+        DependencySet dependencySet = configurations.scm.dependencies
+
+        dependencySet.each {
+            logger.quiet "$it.group:$it.name:$it.version"
+        }
+    }
 }

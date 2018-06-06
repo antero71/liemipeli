@@ -13,7 +13,7 @@ import com.antero.liemipeli.opiskelu.Kurssi
  */
 class Liemi {
 
-    private val aineet: Collection<Aine>? = null
-    private val vaadittavatOpinnot: Collection<Kurssi>? = null
-    private val liemitaitojenTehostaja: Liemi? = null
+    val aineet: Collection<Aine>? = null
+    val vaadittavatOpinnot: Collection<Kurssi>? = null
+    val liemitaitojenTehostaja: Liemi? = null
 }

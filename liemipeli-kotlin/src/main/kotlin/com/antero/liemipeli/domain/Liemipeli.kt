@@ -16,7 +16,7 @@ import java.util.ArrayList
  */
 class Liemipeli {
 
-    internal var beanfactory: BeanFactory? = null
+    lateinit var beanfactory: BeanFactory
     private var koulut: MutableCollection<Koulu>? = null
 
     private val beanFactory: BeanFactory

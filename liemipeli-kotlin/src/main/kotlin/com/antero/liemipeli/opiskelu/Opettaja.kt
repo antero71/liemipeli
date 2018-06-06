@@ -1,6 +1,6 @@
 package com.antero.liemipeli.opiskelu
 
-import com.antero.liemipeli.domain.ElavaOlio
+import com.antero.liemipeli.domain.elaimet.ElavaOlio
 
 
 /**

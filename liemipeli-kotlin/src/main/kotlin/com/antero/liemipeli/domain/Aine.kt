@@ -9,10 +9,4 @@ package com.antero.liemipeli.domain
  *
  * @author Antero Oikkonen
  */
-class Aine {
-    private val nimi: String? = null  //esim. taikasieni
-    private val selostus: String? = null // esim. kasvaa taikametsässä puun juurella satunnaisesti
-    private val vahvuus: Int = 0
-    private val hinta: Int = 0 // perushinta joka voi vaihdella riippuen
-    // hankintapaikasta (kauppa/kauppapuoti/tori)
-}
+class Aine (val nimi: String = "",val selostus: String = "",val vahvuus: Int = 0,val hinta: Int = 0)

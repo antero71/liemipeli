@@ -4,3 +4,5 @@ nbactions.xml
 .gradle
 main.iml
 test.iml
+build
+liemipeli-kotlin/build
