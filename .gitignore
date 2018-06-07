@@ -6,5 +6,6 @@ main.iml
 test.iml
 build
 liemipeli-kotlin/build
+liemipeli-kotlin/out
 liemipeli-test/build
 build/kotlin-build
