@@ -18,8 +18,8 @@ import java.util.Random
  */
 class Pelaaja(nimi: String) : ElavaOlio(), Opiskelija {
 
-    private var opinnot: MutableCollection<Opintosuoritus>? = null
-    private var meneillaanOlevatOpiskelut: MutableCollection<Kurssitoteutus>? = null
+    var opinnot: MutableCollection<Opintosuoritus>
+    var meneillaanOlevatOpiskelut: MutableCollection<Kurssitoteutus>
     var rahat: Int = 0
 
     init {
@@ -29,26 +29,11 @@ class Pelaaja(nimi: String) : ElavaOlio(), Opiskelija {
         rahat = Random().nextInt(10000)
     }
 
-
-    fun getMeneillaanOlevatOpiskelut(): Collection<Kurssitoteutus>? {
-        return meneillaanOlevatOpiskelut
-    }
-
-    fun setMeneillaanOlevatOpiskelut(meneillaanOlevatOpiskelut: MutableCollection<Kurssitoteutus>) {
-        this.meneillaanOlevatOpiskelut = meneillaanOlevatOpiskelut
-    }
-
-    fun getOpinnot(): Collection<Opintosuoritus>? {
-        return opinnot
-    }
-
     fun addOpinto(opinto: Opintosuoritus) {
-        opinnot!!.add(opinto)
+        opinnot.add(opinto)
     }
 
-    fun setOpinnot(opinnot: MutableCollection<Opintosuoritus>) {
-        this.opinnot = opinnot
-    }
+
 
     override fun opiskele() {
         throw UnsupportedOperationException("Not supported yet.") //To change body of generated methods, choose Tools | Templates.

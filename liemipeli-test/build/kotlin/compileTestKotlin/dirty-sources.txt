@@ -1,7 +1,0 @@
-/Users/anterooikkonen/NetBeansProjects/liemipeli/liemipeli-test/src/test/kotlin/com/antero/liemipeli/domain/VampyyriTest.kt
-/Users/anterooikkonen/NetBeansProjects/liemipeli/liemipeli-test/src/test/kotlin/com/antero/liemipeli/domain/PelaajaTest.kt
-/Users/anterooikkonen/NetBeansProjects/liemipeli/liemipeli-test/src/test/kotlin/com/antero/liemipeli/domain/MoonCalculatorTest.kt
-/Users/anterooikkonen/NetBeansProjects/liemipeli/liemipeli-test/src/test/kotlin/com/antero/liemipeli/domain/HarjoitusTest.kt
-/Users/anterooikkonen/NetBeansProjects/liemipeli/liemipeli-test/src/test/kotlin/com/antero/liemipeli/domain/LohikaarmeTest.kt
-/Users/anterooikkonen/NetBeansProjects/liemipeli/liemipeli-test/src/test/kotlin/com/antero/liemipeli/domain/opiskelu/KurssitoteutusTest.kt
-/Users/anterooikkonen/NetBeansProjects/liemipeli/liemipeli-test/src/test/kotlin/com/antero/liemipeli/domain/IhmissusiTest.kt

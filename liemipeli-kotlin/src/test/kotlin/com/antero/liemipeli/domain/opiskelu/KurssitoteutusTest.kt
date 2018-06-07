@@ -5,15 +5,23 @@
  */
 package com.antero.liemipeli.domain.opiskelu
 
+import com.antero.liemipeli.opiskelu.Harjoitus
+import com.antero.liemipeli.opiskelu.Kurssi
+import com.antero.liemipeli.opiskelu.Kurssitoteutus
+import com.antero.liemipeli.opiskelu.Opettaja
 import org.junit.jupiter.api.Assertions.assertEquals
+import org.junit.jupiter.api.Assertions.fail
 import org.junit.jupiter.api.BeforeAll
 import org.junit.jupiter.api.Test
+import org.junit.jupiter.api.TestInstance
+import org.junit.jupiter.api.TestInstance.Lifecycle
 
 
 /**
  *
  * @author Antero Oikkonen
  */
+@TestInstance(Lifecycle.PER_CLASS)
 class KurssitoteutusTest {
 
     internal var toteutus: Kurssitoteutus? = null
@@ -21,9 +29,9 @@ class KurssitoteutusTest {
     @BeforeAll
     fun setUp() {
         toteutus = Kurssitoteutus()
-        toteutus!!.kurssi = luoKurssi("Liementeon perusteet I")
-        toteutus!!.kurssinKokonaisPisteet = 100
-        toteutus!!.kurssinEteneminen = 0
+        toteutus?.kurssi = luoKurssi("Liementeon perusteet I")
+        toteutus?.kurssinKokonaisPisteet = 100
+        toteutus?.kurssinEteneminen = 0
     }
 
     @Test
@@ -37,11 +45,8 @@ class KurssitoteutusTest {
         val result = instance.harjoitukset
 
         assertEquals(expResult, result)
-        assertEquals(1, result.size)
-        assertEquals("5", (result.iterator().next() as Harjoitus).vastaus)
-
-
-        //fail("The test case is a prototype.");
+        assertEquals(1, result?.size)
+        assertEquals("5", (result?.iterator()?.next() as Harjoitus).vastaus)
     }
 
     @Test
@@ -116,9 +121,9 @@ class KurssitoteutusTest {
         val instance = Kurssitoteutus()
         instance.kurssi = kurssi
         val k = instance.kurssi
-        assertEquals(10, k.opintopisteet)
-        assertEquals(1000, k.kurssinHinta)
-        assertEquals(kurssinNimi, k.kurssinNimi)
+        assertEquals(10, k?.opintopisteet)
+        assertEquals(1000, k?.kurssinHinta)
+        assertEquals(kurssinNimi, k?.kurssinNimi)
         //fail("The test case is a prototype.");
     }
 

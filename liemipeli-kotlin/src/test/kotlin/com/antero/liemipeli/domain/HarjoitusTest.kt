@@ -5,15 +5,12 @@
  */
 package com.antero.liemipeli.domain
 
-import com.antero.liemipeli.domain.opiskelu.Harjoitus
-import org.junit.jupiter.api.AfterAll;
-import org.junit.jupiter.api.AfterEach;
+import com.antero.liemipeli.opiskelu.Harjoitus
 import org.junit.jupiter.api.Assertions.assertFalse
 import org.junit.jupiter.api.Assertions.assertTrue
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Disabled;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.BeforeAll
+import org.junit.jupiter.api.BeforeEach
+import org.junit.jupiter.api.Test
 
 /**
  *
@@ -23,7 +20,7 @@ class HarjoitusTest {
 
     private var harjoitus: Harjoitus? = null
 
-    @BeforeAll
+    @BeforeEach
     fun setUp() {
         harjoitus = Harjoitus("Kuka keksi suhteellisuusteorian", "Einstain")
     }
@@ -31,7 +28,7 @@ class HarjoitusTest {
     @Test
     fun testaaVastaaOikeaVastays() {
 
-        harjoitus!!.kysymys = "Mitä on 2 * 2?"
+        harjoitus?.kysymys = "Mitä on 2 * 2?"
         harjoitus!!.setOikeaVastaus("4")
         assertTrue(harjoitus!!.vastaa("4"))
 

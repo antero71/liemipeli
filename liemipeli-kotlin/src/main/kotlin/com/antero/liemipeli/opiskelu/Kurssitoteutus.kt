@@ -6,15 +6,14 @@ package com.antero.liemipeli.opiskelu
  *
  * @author Antero Oikkonen
  */
-class Kurssitoteutus {
+data class Kurssitoteutus (
+    var opettaja: Opettaja? = null,
+    var kurssi: Kurssi? = null,
+    var kurssinKokonaisPisteet: Int = 0,
+    var kurssinEteneminen: Int = 0,
+    var harjoitukset: Collection<Harjoitus>? = null)
 
-    var opettaja: Opettaja? = null
-    var kurssi: Kurssi? = null
-    var kurssinKokonaisPisteet: Int = 0
-    var kurssinEteneminen: Int = 0
-    var harjoitukset: Collection<Harjoitus>? = null
-
-
+{
     val isSuoritettu: Boolean
         get() = kurssinEteneminen >= kurssinKokonaisPisteet
 

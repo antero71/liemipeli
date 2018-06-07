@@ -22,10 +22,8 @@ class Liemipeli {
     private val beanFactory: BeanFactory
         @Throws(BeansException::class)
         get() {
-            if (beanfactory == null) {
                 beanfactory = ClassPathXmlApplicationContext(
                         "spring-context.xml")
-            }
             return beanfactory
         }
 
@@ -70,7 +68,7 @@ class Liemipeli {
 
     private fun luoOpettaja(nimi: String): Opettaja {
         beanFactory
-        return beanfactory!!.getBean(nimi) as Opettaja
+        return beanfactory.getBean(nimi) as Opettaja
     }
 
     fun listaaKoulut() {

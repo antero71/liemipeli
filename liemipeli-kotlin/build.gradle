@@ -13,6 +13,9 @@ group 'liemipeli'
 version '1.0-SNAPSHOT'
 
 apply plugin: 'kotlin'
+apply plugin: 'application'
+
+mainClassName = "com.antero.liemipeli.ui.text.Kayttoliittyma"
 
 repositories {
     mavenCentral()
@@ -21,6 +24,9 @@ repositories {
 dependencies {
     compile "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
     compile group: 'org.springframework', name: 'spring-context', version:'4.0.7.RELEASE'
+    testCompile "org.junit.jupiter:junit-jupiter-api:5.2.0"
+    // https://mvnrepository.com/artifact/org.mockito/mockito-all
+    testCompile group: 'org.mockito', name: 'mockito-all', version: '1.10.19'
 }
 
 compileKotlin {

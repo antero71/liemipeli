@@ -5,8 +5,10 @@
  */
 package com.antero.liemipeli.domain
 
+import com.antero.liemipeli.DeterministicRandom
+import com.antero.liemipeli.domain.elaimet.Lohikaarme
+import com.antero.liemipeli.domain.elaimet.Maksa
 import com.antero.liemipeli.domain.taiat.LohikaarmeTaika
-import com.antero.liemipeli.domain.test.DeterministicRandom
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Assertions.assertNull
 import org.junit.jupiter.api.Test
@@ -31,10 +33,11 @@ class LohikaarmeTest {
         lohikaarme.isElava = false
         val m = Maksa()
 
-        assertEquals(m, lohikaarme.maksa)
+        assertEquals(m.nimi, lohikaarme.maksa?.nimi)
 
     }
 
+    @Test
     fun testaaGetMaksaJosLohikaarmeElaa() {
         lohikaarme.isElava = true
         assertNull(lohikaarme.maksa)
@@ -42,9 +45,7 @@ class LohikaarmeTest {
 
     fun testaaOtaSisaelinJosLohikaarmeElossaJaTaikaOk() {
 
-        val r = DeterministicRandom()
-        val luvut = doubleArrayOf(0.3)
-        r.setLuvut(luvut)
+        val r = DeterministicRandom(doubleArrayOf(0.3))
 
         val taika = LohikaarmeTaika(r)
 
@@ -53,9 +54,7 @@ class LohikaarmeTest {
 
     fun testaaOtaSisaelinJosLohikaarmeElossaJaTaikaEiOk() {
 
-        val r = DeterministicRandom()
-        val luvut = doubleArrayOf(0.6)
-        r.setLuvut(luvut)
+        val r = DeterministicRandom(doubleArrayOf(0.6))
 
         val taika = LohikaarmeTaika(r)
 

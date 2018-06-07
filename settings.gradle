@@ -1,5 +1,5 @@
 rootProject.name = 'liemipeli'
 
 include 'liemipeli-kotlin'
-include 'liemipeli-test'
+
 

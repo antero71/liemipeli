@@ -5,10 +5,14 @@
  */
 package com.antero.liemipeli.domain
 
-import javafx.beans.binding.Bindings.`when`
+import com.antero.liemipeli.domain.elaimet.Ihmissusi
+import com.antero.liemipeli.util.MoonCalcInterface
 import org.junit.jupiter.api.Assertions.assertFalse
-import org.junit.jupiter.api.BeforeAll
+import org.junit.jupiter.api.Assertions.assertTrue
 import org.junit.jupiter.api.Test
+import org.junit.jupiter.api.TestInstance
+import org.junit.jupiter.api.TestInstance.Lifecycle
+import org.mockito.Mockito.*
 import java.util.*
 
 
@@ -16,19 +20,17 @@ import java.util.*
  *
  * @author Antero Oikkonen
  */
+@TestInstance(Lifecycle.PER_CLASS)
 class IhmissusiTest {
 
     internal var iSusi: Ihmissusi? = null
 
-    @BeforeAll
-    fun setUp() {
-        //iSusi = new Ihmissusi(null);
-    }
-
     @Test
     fun testIsHirvio() {
+
         val calc = mock(MoonCalcInterface::class.java)
         val cal = mock(Calendar::class.java)
+        `when`(cal.get(Calendar.MONTH)).thenReturn(1)
         `when`(cal.get(Calendar.MONTH)).thenReturn(1)
         `when`(cal.get(Calendar.DAY_OF_MONTH)).thenReturn(19)
         `when`(cal.get(Calendar.YEAR)).thenReturn(2019)

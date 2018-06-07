@@ -17,13 +17,14 @@ class Kauppa(private val varasto: Varasto) : KauppaInterface {
     override fun osta(nimi: String, maksu: Int): HashMap<Tuote, Int> {
         val haettuTuote = varasto.haeTuote(nimi)
         val map = HashMap<Tuote,Int>()
-        /* TODO korjaa, haettu tuote voi olla null
-        if (haettuTuote.hinta <= maksu) {
+        // TODO korjaa, haettu tuote voi olla null
+
+        if (haettuTuote!= null && haettuTuote.hinta <= maksu) {
             val vaihtorahat = maksu - haettuTuote.hinta
             map.put(haettuTuote, vaihtorahat)
             return map
         }
-        */
+
         return HashMap()
     }
 
