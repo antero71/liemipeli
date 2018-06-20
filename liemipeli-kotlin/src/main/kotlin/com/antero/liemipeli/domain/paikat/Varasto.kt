@@ -33,16 +33,18 @@ class Varasto(private var koko: Int) : VarastoInterface {
         } else tuotteet.add(tuote)
     }
 
-    override fun asetaVarastonKoko(koko: Int): Int {
-        var koko = koko
-        if (koko < 0) {
+    override fun asetaVarastonKoko(vkoko: Int): Int {
+
+        var tempKoko = vkoko
+
+        if (vkoko < 0) {
             throw IllegalArgumentException("koko pitää olla positiivinen")
         }
-        if (koko < tuotteet.size) {
-            koko = tuotteet.size
+        if (vkoko < tuotteet.size) {
+            tempKoko = tuotteet.size
         }
-        this.koko = koko
-        return koko
+        this.koko = tempKoko
+        return this.koko
     }
 
     /**

@@ -104,7 +104,7 @@ class KurssitoteutusTest {
     fun testGetOpettaja() {
         println("getOpettaja")
         val instance = Kurssitoteutus()
-        val expResult = Opettaja()
+        val expResult = Opettaja("Antero")
         expResult.oppiarvo = "Liementeon mestari"
         instance.opettaja = expResult
         val result = instance.opettaja

@@ -30,16 +30,18 @@ class LohikaarmeTest {
 
     @Test
     fun testGetMaksaJosLohikaarmeKuollut() {
-        lohikaarme.isElava = false
+        lohikaarme.elava = false
         val m = Maksa()
 
         assertEquals(m.nimi, lohikaarme.maksa?.nimi)
+
+        assertEquals(1,2)
 
     }
 
     @Test
     fun testaaGetMaksaJosLohikaarmeElaa() {
-        lohikaarme.isElava = true
+        lohikaarme.elava = true
         assertNull(lohikaarme.maksa)
     }
 

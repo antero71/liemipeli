@@ -2,6 +2,7 @@ target/
 nbactions.xml
 .idea
 .gradle
+gradle
 main.iml
 test.iml
 build/

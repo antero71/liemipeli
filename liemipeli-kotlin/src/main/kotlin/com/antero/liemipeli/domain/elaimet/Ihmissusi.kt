@@ -7,11 +7,20 @@ import java.util.*
  *
  * @author Antero Oikkonen
  */
-class Ihmissusi(private val moonCalc: MoonCalcInterface) : ElavaOlio() {
+class Ihmissusi(private val moonCalc: MoonCalcInterface) : ElavaOlio {
     // täydenkuun aikaan muuttuu hirviöksi
 
     private val fullMoon = "Full"
     private var cal: Calendar? = null
+
+    override val nimi: String?
+        get() = "Werewolf"
+
+    var elava: Boolean = true
+
+    override fun isElava(): Boolean {
+        return elava
+    }
 
     val isHirvio: Boolean
         get() {

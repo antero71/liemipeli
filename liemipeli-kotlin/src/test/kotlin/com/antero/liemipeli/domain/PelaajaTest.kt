@@ -10,11 +10,8 @@ import com.antero.liemipeli.opiskelu.Kurssitoteutus
 import com.antero.liemipeli.opiskelu.Opintosuoritus
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Assertions.assertTrue
-import org.junit.jupiter.api.BeforeAll
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
-import org.junit.jupiter.api.TestInstance
-import org.junit.jupiter.api.TestInstance.Lifecycle
 
 /**
  *
@@ -50,7 +47,7 @@ class PelaajaTest {
 
     @Test
     fun testaaGetJaSetNimi() {
-        pelaaja.nimi = "Antero"
+        pelaaja = Pelaaja("Antero")
         assertEquals("Antero", pelaaja.nimi)
     }
 
@@ -66,10 +63,10 @@ class PelaajaTest {
         tot.kurssi = k1
         pelaaja.opiskele(tot)
 
-        assertTrue(pelaaja.meneillaanOlevatOpiskelut?.size == 1)
+        assertTrue(pelaaja.meneillaanOlevatOpiskelut.size == 1)
 
         pelaaja.opiskele(tot)
-        assertTrue(pelaaja.meneillaanOlevatOpiskelut?.size == 1)
+        assertTrue(pelaaja.meneillaanOlevatOpiskelut.size == 1)
 
         val k2 = Kurssi()
         k2.kurssinNimi = kurssinNimi

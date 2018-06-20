@@ -88,7 +88,7 @@ class MoonCalculation : MoonCalcInterface {
     // int     day      1 = 1
 
     override fun moonPhase(year: Int, month: Int, day: Int): Int {
-        var month = month
+        var monthInternal = month
 
         val phase: Int          // Moon phase
         val cent: Int           // Century number (1979 = 20)
@@ -96,9 +96,9 @@ class MoonCalculation : MoonCalcInterface {
         var diy: Int            // Day in the year
         val golden: Int         // Moon's golden number
 
-        if (month < 0 || month > 12) month = 0     // Just in case
-        diy = day + day_year[month]                // Day in the year
-        if (month > 2 && this.isLeapYearP(year))
+        if (monthInternal < 0 || monthInternal > 12) monthInternal = 0     // Just in case
+        diy = day + day_year[monthInternal]                // Day in the year
+        if (monthInternal > 2 && this.isLeapYearP(year))
             diy++                                  // Leapyear fixup
         cent = year / 100 + 1                    // Century number
         golden = year % 19 + 1                   // Golden number

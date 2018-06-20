@@ -14,11 +14,10 @@ import org.junit.jupiter.api.Test
  */
 class VampyyriTest {
 
-    internal var v = Vampyyri()
+    internal var v = Vampyyri("Darren")
 
     @Test
     fun testSetNimi() {
-        v.nimi = "Darren"
         assertEquals("Darren", v.nimi)
     }
 

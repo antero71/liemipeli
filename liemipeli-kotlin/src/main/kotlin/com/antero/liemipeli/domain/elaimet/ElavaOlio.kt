@@ -4,10 +4,12 @@ package com.antero.liemipeli.domain.elaimet
  *
  * @author Antero Oikkonen
  */
-open class ElavaOlio {
-    var nimi: String? = null
-    var isElava: Boolean = false
-    private val pituus: Float = 0.toFloat()
-    private val paino: Float = 0.toFloat()
+interface ElavaOlio {
+    val nimi: String?
+    fun isElava(): Boolean
+    val pituus: Double
+        get() = 1.7
+    val paino: Double
+        get() = 62.9
 }
 

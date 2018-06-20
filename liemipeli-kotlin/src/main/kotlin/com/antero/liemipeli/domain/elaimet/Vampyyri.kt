@@ -11,4 +11,14 @@ import com.antero.liemipeli.domain.elaimet.ElavaOlio
  *
  * @author Antero Oikkonen
  */
-class Vampyyri : ElavaOlio()// tarvitsee elääkseen verta säännöllisesti
+class Vampyyri(override val nimi: String) : ElavaOlio{
+
+
+
+    var elava = true
+
+    override fun isElava(): Boolean {
+        return elava
+    }
+
+}// tarvitsee elääkseen verta säännöllisesti

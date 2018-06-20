@@ -16,14 +16,21 @@ import java.util.Random
  *
  * @author Antero Oikkonen
  */
-class Pelaaja(nimi: String) : ElavaOlio(), Opiskelija {
+class Pelaaja(nimi: String) : ElavaOlio, Opiskelija {
 
     var opinnot: MutableCollection<Opintosuoritus>
     var meneillaanOlevatOpiskelut: MutableCollection<Kurssitoteutus>
     var rahat: Int = 0
+    var elava = true
+
+    override val nimi = nimi
+
+    override fun isElava(): Boolean {
+        return elava
+    }
 
     init {
-        super.nimi = nimi
+
         opinnot = ArrayList()
         meneillaanOlevatOpiskelut = ArrayList()
         rahat = Random().nextInt(10000)
@@ -40,8 +47,8 @@ class Pelaaja(nimi: String) : ElavaOlio(), Opiskelija {
     }
 
     override fun opiskele(kurssitoteutus: Kurssitoteutus) {
-        if (!meneillaanOlevatOpiskelut!!.contains(kurssitoteutus)) {
-            meneillaanOlevatOpiskelut!!.add(kurssitoteutus)
+        if (!meneillaanOlevatOpiskelut.contains(kurssitoteutus)) {
+            meneillaanOlevatOpiskelut.add(kurssitoteutus)
         }
     }
 

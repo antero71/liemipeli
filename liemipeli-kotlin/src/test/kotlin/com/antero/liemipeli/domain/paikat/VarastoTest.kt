@@ -45,7 +45,7 @@ class VarastoTest {
     }
 
     @Test
-    fun testKokoaEivoiasettaaPienemmäksiKuinVarastosaldo() {
+    fun testKokoaEivoiasettaaPienemmaksiKuinVarastosaldo() {
         varasto!!.asetaVarastonKoko(10)
         varasto!!.lisaaTuote(TuoteImpl("sokeri", 10, Properties()))
         varasto!!.lisaaTuote(TuoteImpl("vehnä", 2, Properties()))
@@ -54,7 +54,7 @@ class VarastoTest {
 
     }
 
-    @Test
+    @org.junit.jupiter.api.Test
     fun testVarastonArvo() {
         varasto!!.asetaVarastonKoko(5)
         varasto!!.lisaaTuote(TuoteImpl("Vehna", 25, Properties()))
@@ -102,7 +102,7 @@ class VarastoTest {
 
         assertEquals(3, varasto!!.varastoSaldo())
 
-        val t = varasto!!.haeTuote("miekka")
+        varasto!!.haeTuote("miekka")
 
         assertEquals(2, varasto!!.varastoSaldo())
     }

@@ -11,4 +11,13 @@ import com.antero.liemipeli.domain.elaimet.ElavaOlio
  *
  * @author Antero Oikkonen
  */
-open class Salamanteri : ElavaOlio()
+open class Salamanteri : ElavaOlio{
+    override val nimi: String?
+        get() = "Fire"
+
+    var elava = true
+
+    override fun isElava(): Boolean {
+        return elava
+    }
+}

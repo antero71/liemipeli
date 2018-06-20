@@ -3,9 +3,6 @@ package com.antero.liemipeli.domain
 import com.antero.liemipeli.opiskelu.Koulu
 import com.antero.liemipeli.opiskelu.Kurssitoteutus
 import com.antero.liemipeli.opiskelu.Opettaja
-import org.springframework.beans.BeansException
-import org.springframework.beans.factory.BeanFactory
-import org.springframework.context.support.ClassPathXmlApplicationContext
 import java.util.ArrayList
 
 
@@ -16,18 +13,7 @@ import java.util.ArrayList
  */
 class Liemipeli {
 
-    lateinit var beanfactory: BeanFactory
     private var koulut: MutableCollection<Koulu>? = null
-
-    private val beanFactory: BeanFactory
-        @Throws(BeansException::class)
-        get() {
-                beanfactory = ClassPathXmlApplicationContext(
-                        "spring-context.xml")
-            return beanfactory
-        }
-
-
 
     fun alustaPeli() {
         val opettajat = alustaOpettajat()
@@ -67,8 +53,9 @@ class Liemipeli {
     }
 
     private fun luoOpettaja(nimi: String): Opettaja {
-        beanFactory
-        return beanfactory.getBean(nimi) as Opettaja
+        //beanFactory
+        //return beanfactory.getBean(nimi) as Opettaja
+        return Opettaja(nimi)
     }
 
     fun listaaKoulut() {

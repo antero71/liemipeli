@@ -1,37 +1,39 @@
 buildscript {
-    ext.kotlin_version = '1.2.41'
-
+    ext.kotlin_version = '1.2.50'
     repositories {
         mavenCentral()
     }
     dependencies {
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:2.0.3.RELEASE")
     }
 }
-
-group 'liemipeli'
-version '1.0-SNAPSHOT'
-
 apply plugin: 'kotlin'
-apply plugin: 'application'
-
-mainClassName = "com.antero.liemipeli.ui.text.Kayttoliittyma"
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'idea'
+apply plugin: 'org.springframework.boot'
+apply plugin: 'io.spring.dependency-management'
 
 repositories {
     mavenCentral()
 }
-
 dependencies {
     compile "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
-    compile group: 'org.springframework', name: 'spring-context', version:'4.0.7.RELEASE'
-    testCompile "org.junit.jupiter:junit-jupiter-api:5.2.0"
-    // https://mvnrepository.com/artifact/org.mockito/mockito-all
-    testCompile group: 'org.mockito', name: 'mockito-all', version: '1.10.19'
+}
+
+bootJar {
+    baseName = 'liemipeli'
+    version =  '0.1.0'
 }
 
 compileKotlin {
-    kotlinOptions.jvmTarget = "1.8"
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
 }
 compileTestKotlin {
-    kotlinOptions.jvmTarget = "1.8"
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
 }

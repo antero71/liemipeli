@@ -15,7 +15,7 @@ interface VarastoInterface {
 
     fun haeTuote(nimi: String): Tuote?
     fun lisaaTuote(tuote: Tuote): Boolean
-    fun asetaVarastonKoko(koko: Int): Int
+    fun asetaVarastonKoko(vkoko: Int): Int
     fun laskeVarastonArvo(): Int
     fun varastoSaldo(): Int
 

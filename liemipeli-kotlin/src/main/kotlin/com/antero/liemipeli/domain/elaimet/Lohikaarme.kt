@@ -12,7 +12,17 @@ import com.antero.liemipeli.domain.taiat.Taika
  *
  * @author Antero Oikkonen
  */
-class Lohikaarme : ElavaOlio() {
+class Lohikaarme : ElavaOlio {
+
+
+    override val nimi: String?
+        get() = "Dragon"
+
+    var elava = true
+
+    override fun isElava(): Boolean {
+        return elava
+    }
 
     /**
      * jos lohikäärme on kuollut, palauttaa maksan (jos ei ole jo otettu),
@@ -20,7 +30,7 @@ class Lohikaarme : ElavaOlio() {
      */
     var maksa: Sisaelin? = null
         get() {
-            if (!isElava) {
+            if (!isElava()) {
                 val s = field
                 this.maksa = null
                 return s
@@ -43,9 +53,9 @@ class Lohikaarme : ElavaOlio() {
      * @return
      */
     fun otaSisaelin(taika: Taika?, elin: Sisaelin): Sisaelin? {
-        if (isElava && taika != null && taika.taio()) {
+        if (isElava() && taika != null && taika.taio()) {
             return Maksa()
-        } else if (!isElava) {
+        } else if (!isElava()) {
             if (elin is Maksa) {
                 return maksa
             }

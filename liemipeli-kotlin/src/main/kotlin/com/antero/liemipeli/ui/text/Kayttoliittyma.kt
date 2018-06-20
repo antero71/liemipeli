@@ -9,13 +9,14 @@ import com.antero.liemipeli.domain.Liemipeli
 import com.antero.liemipeli.ui.text.commands.Komento
 import com.antero.liemipeli.ui.text.commands.ListaaKoulut
 import com.antero.liemipeli.ui.text.commands.LopetaKomento
-import java.util.Scanner
-import java.util.TreeMap
+import org.springframework.boot.autoconfigure.SpringBootApplication
+import java.util.*
 
 /**
  *
  * @author Antero Oikkonen
  */
+@SpringBootApplication
 class Kayttoliittyma(private val lukija: Scanner) {
     private val peli: Liemipeli
 
@@ -30,7 +31,7 @@ class Kayttoliittyma(private val lukija: Scanner) {
     }
 
     private fun aloita() {
-        var komento = "0"
+
 
         while (true) {
 
@@ -38,7 +39,7 @@ class Kayttoliittyma(private val lukija: Scanner) {
                 println(indeksi + ") " + komennot[indeksi]?.tulosta())
             }
 
-            komento = lukija.nextLine()
+            val komento = lukija.nextLine()
 
             val k = komennot[komento]
 
