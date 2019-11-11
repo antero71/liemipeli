@@ -56,7 +56,7 @@
 * kaupunki
 * 
 
-* eläimiä 
+## eläimiä 
   * liskot
     * Lohikäärmeitä
   * nisäkkäät
@@ -87,8 +87,7 @@
     * varpunen
     * korppikotka
 
-* pelaaja
-* liemiä
+## liemiä
   * uniliemi
   * muodonmuutosliemi
   * onnenliemi
@@ -104,13 +103,12 @@
 * myrkkyjä
   * hidas tappaja
   * syövyttävä
-  * 
+  * punakärpässieni
+  * valkokärpässieni
 
 
-## Ruoka
-
-* kasvit
-  * puut
+## Puita
+ * puut
     * koivu
     * kuusi
     * mänty
@@ -120,7 +118,7 @@
     * pihlaja
     * tammi
     * pähkinäpuu
-    * 
+## Ruoka-aineita
 
   * sipuli
     * valkosipuli
@@ -153,9 +151,8 @@
 
 * palkokasvit
   * linssit
-   
   * virnat
-   * talonpoikaispapu (härkäpäpu)
+    * talonpoikaispapu (härkäpäpu)
   * papu
     * kidneypapu
     * valkopapu
@@ -167,9 +164,6 @@
     * ruskea linssi
     * vihreä linssi
     
-
-
-
 * yrittejä
   * mäkimeirami (oregano)
   * meirami
@@ -202,14 +196,13 @@
 
 
 * sieniä
-  * punakärpässieni
-  * valkokärpässieni
+
   * herkkutatti
   * kehnäsieni
   * kanttarelli
   * suppilovahvero
   * seitikki
-  * 
+
 
 ## Raaka-aineita
 
@@ -221,30 +214,29 @@
   * vuorisuola
 
 
-* työkaluja
+## työkaluja
   * ruuanvalmistusvälineitä
     * pata
     * kauha
     * mortteli
     * veitsi
     * lusikka
-  * kulkuvälineitä
-    * vene
-      * airot
-    * hevoskärryt
-    * työntökärrit
   * teräaseita
     * hakku
     * kirves
     * lapio
     * kuokka
     * viikate
-  * köysi
+## kulkuvälineitä
+    * vene
+      * airot
+    * hevoskärryt
+    * työntökärrit
 
-  * 
+  * köysi 
 
 
-huonekaluja
+## huonekaluja
   * matto
   * sänky/riippusänky
     * olkipatja
@@ -255,8 +247,7 @@ huonekaluja
   * penkki
  
  
-
-vaatteita
+## asusteita
 * viitta
 * tunika
 * paita

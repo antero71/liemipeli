@@ -45,6 +45,7 @@ class LohikaarmeTest {
         assertNull(lohikaarme.maksa)
     }
 
+    @Test
     fun testaaOtaSisaelinJosLohikaarmeElossaJaTaikaOk() {
 
         val r = DeterministicRandom(doubleArrayOf(0.3))
