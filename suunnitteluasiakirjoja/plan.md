@@ -2,6 +2,15 @@
 
 ## Sisältää
 
+Ominaisuuksia
+* aikakausi vuo vaihtua
+  * esim. menee vaikka 1920-luvun Yhdysvaltoihin voi olla vaikutusta jos liemeen tarvitaan alkoholia, mutta on kieltolaki. Voi joutua lahjomaan poliisin.
+  * jos menee noitavainojen aikaan, siihen voi liittyä, että joutuu syytteeseen noituudesta.
+  * jos menee Afrikkaan kun orjuus on voimassa, jos hahmosi on musta, voit joutua orjaksi. Valkoinen voi joutua salamurhatuksi, koska on häväissyt heimon pyhän paikan.
+  * täysikuun aikaan ihmissusi voi tulla raatelemaan. Tällöin voi menettää tavaroita ja vaatetus voi rikkoontua ja kulua. Voi myös saada vammoja jotka tulehtuvat.
+  * Hahmon syntymäpäivänä ja peliin rekisteröitymisen vuosipäivänä onnipisteitä saa lisää päivän ajaksi. Matkaan kuluu vähemmän aikaa, kaupasta saa tavaroita edullisemmin. Löytää harvinaisia esineita paremmin. Pienempi todennäköisyys joutua ikävään tilanteeseen ja parempi todennäköisyys päästä niistä pois.
+  * Syntymäpäivä generoituu satunnaisesti hahmon luonnin yhteydessä. (Normaali länsimäinen kalenteri)
+
 ## Ympäristö
 * keskieurooppalainen
 * vuoristoa
